@@ -19,4 +19,4 @@ Wesley ROubou meu celular
 piriquitaiada
 
 Ilso mulher do wesley
-.Jean melhor do LOL..
+.Jean melhor do LOL..(MELHOR BAITOLA)
