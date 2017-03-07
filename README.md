@@ -23,3 +23,5 @@ Ilso mulher do wesley
  LALALALALAAL
 
 Batata Kawaii
+
+LULA 2018! O GOLPE NÃO PREVALECERÁ!
