@@ -40,6 +40,6 @@ class UserTest extends TestCase
         $this->assertArrayHasKey('password', $arrayCopy);
         $this->assertArrayHasKey('birthDate', $arrayCopy);
         $this->assertArrayHasKey('typeAuth', $arrayCopy);
-        $this->assertArrayHasKey('universities', $arrayCopy);
+        $this->assertArrayHasKey('universitie', $arrayCopy);
     }
 }

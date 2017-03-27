@@ -16,7 +16,10 @@
         "zendframework/zend-component-installer": "^1.0 || ^0.7 || ^1.0.0-dev@dev",
         "zendframework/zend-mvc": "^3.0.1",
         "zfcampus/zf-development-mode": "^3.0",
-        "squizlabs/php_codesniffer": "*"
+        "squizlabs/php_codesniffer": "*",
+        "zendframework/zend-validator": "^2.9",
+        "zendframework/zend-filter": "^2.7",
+        "zendframework/zend-inputfilter": "^2.7"
     },
     "autoload": {
         "psr-4": {
