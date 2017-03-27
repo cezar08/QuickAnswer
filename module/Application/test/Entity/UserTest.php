@@ -19,14 +19,18 @@ use Application\Entity\UserEntity as User;
 
 class UserTest extends TestCase
 {
-
     public function testAmountAttributes()
     {
         $arrayCopy = (new User())->getArrayCopy();
         $this->assertEquals(8, count($arrayCopy));
 
         return $arrayCopy;
-    }
+    }/**
+ * Class UserTest
+ * @package ApplicationTest\Entity
+ * @group Entities
+ */
+
 
     /**
      * @depends testAmountAttributes
