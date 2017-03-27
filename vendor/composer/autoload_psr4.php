@@ -17,6 +17,7 @@ return array(
     'Zend\\Mvc\\' => array($vendorDir . '/zendframework/zend-mvc/src'),
     'Zend\\ModuleManager\\' => array($vendorDir . '/zendframework/zend-modulemanager/src'),
     'Zend\\Loader\\' => array($vendorDir . '/zendframework/zend-loader/src'),
+    'Zend\\InputFilter\\' => array($vendorDir . '/zendframework/zend-inputfilter/src'),
     'Zend\\Http\\' => array($vendorDir . '/zendframework/zend-http/src'),
     'Zend\\Filter\\' => array($vendorDir . '/zendframework/zend-filter/src'),
     'Zend\\EventManager\\' => array($vendorDir . '/zendframework/zend-eventmanager/src'),

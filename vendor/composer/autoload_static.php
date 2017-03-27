@@ -23,6 +23,7 @@ class ComposerStaticInit38a23e9691f15ad9b043832f4819fabb
             'Zend\\Mvc\\' => 9,
             'Zend\\ModuleManager\\' => 19,
             'Zend\\Loader\\' => 12,
+            'Zend\\InputFilter\\' => 17,
             'Zend\\Http\\' => 10,
             'Zend\\Filter\\' => 12,
             'Zend\\EventManager\\' => 18,
@@ -107,6 +108,10 @@ class ComposerStaticInit38a23e9691f15ad9b043832f4819fabb
         'Zend\\Loader\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-loader/src',
+        ),
+        'Zend\\InputFilter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-inputfilter/src',
         ),
         'Zend\\Http\\' => 
         array (

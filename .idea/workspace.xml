@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="89d20f09-f494-468f-ae3b-cc8db7113382" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/post-code.md" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/modules.config.php" afterPath="$PROJECT_DIR$/config/modules.config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/CHANGELOG.md" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/composer.json" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/set.md" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/set.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/crc32.md" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/crc32.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/identical.md" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/identical.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/in-array.md" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/in-array.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/not-empty.md" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/not-empty.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/string-length.md" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/string-length.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/mkdocs.yml" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/mkdocs.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/AbstractValidator.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/AbstractValidator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/AbstractAdapter.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/AbstractAdapter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Codabar.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Codabar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Code128.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Code128.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Code39.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Code39.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Code93.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Code93.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Between.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Between.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Bitwise.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Bitwise.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Callback.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Callback.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/CreditCard.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/CreditCard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Csrf.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Csrf.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Date.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Date.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/DateStep.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/DateStep.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Db/AbstractDb.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Db/AbstractDb.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Db/RecordExists.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Db/RecordExists.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Digits.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Digits.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/EmailAddress.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/EmailAddress.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Explode.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Explode.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Count.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Count.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Crc32.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Crc32.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/ExcludeExtension.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/ExcludeExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/ExcludeMimeType.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/ExcludeMimeType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Exists.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Exists.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Extension.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Extension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/FilesSize.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/FilesSize.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Hash.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Hash.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/ImageSize.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/ImageSize.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/IsCompressed.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/IsCompressed.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/IsImage.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/IsImage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Md5.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Md5.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/MimeType.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/MimeType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/NotExists.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/NotExists.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Sha1.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Sha1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Size.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Size.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Upload.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Upload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/UploadFile.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/UploadFile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/WordCount.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/WordCount.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/GpsPoint.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/GpsPoint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/GreaterThan.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/GreaterThan.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Hex.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Hex.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Hostname.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Hostname.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Hostname/Com.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Hostname/Com.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Iban.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Iban.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Identical.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Identical.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/InArray.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/InArray.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Ip.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Ip.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/IsInstanceOf.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/IsInstanceOf.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Isbn.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Isbn.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/LessThan.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/LessThan.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/NotEmpty.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/NotEmpty.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Regex.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Regex.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Sitemap/Changefreq.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Sitemap/Changefreq.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Sitemap/Lastmod.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Sitemap/Lastmod.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Sitemap/Loc.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Sitemap/Loc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Sitemap/Priority.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Sitemap/Priority.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Step.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Step.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/StringLength.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/StringLength.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Timezone.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Timezone.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Uri.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Uri.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/ValidatorChain.php" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/ValidatorChain.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="UserEntity.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Application/src/Entity/UserEntity.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modules.config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/modules.config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/module/Application/src/Entity/UserEntity.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="27" />
+    <option name="width" value="1024" />
+    <option name="height" value="741" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuickAnswer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuickAnswer" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuickAnswer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuickAnswer" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="module" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuickAnswer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuickAnswer" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="module" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuickAnswer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuickAnswer" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="module" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuickAnswer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuickAnswer" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="js.eslint.eslintPackage" value="" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="89d20f09-f494-468f-ae3b-cc8db7113382" name="Default" comment="" />
+      <created>1490052111744</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1490052111744</updated>
+      <workItem from="1490052113727" duration="254000" />
+      <workItem from="1490052406358" duration="12000" />
+      <workItem from="1490652008309" duration="1458000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1724000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="1024" height="741" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/module/Application/src/Entity/UserEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Application/src/Entity/UserEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Application/src/Entity/UserEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/modules.config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
