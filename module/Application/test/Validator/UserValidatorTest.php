@@ -1,11 +1,11 @@
 <?php
 
-namespace Application\Validator;
+namespace ApplicationTest\Validator;
 
 
-use Application\UserValidator;
 
 use PHPUnit\Framework\TestCase;
+use Application\Validator\UserValidator as UserValidator;
 
 /**
  * Class UserValidatorTest
@@ -48,6 +48,30 @@ class UserValidatorTest extends TestCase
         $validator = new UserValidator();
         $validator->setData($this->dataProvider);
         $this->assertTrue($validator->isValid());
+    }
+
+    public function testInvalidValidator(){
+        $validator = new UserValidator();
+        $validator->setData($this->invalidDataProvider);
+
+        $this->assertFalse($validator->isValid());
+        $this->assertArrayHasKey('name', $validator->getMessages());
+        $this->assertArrayHasKey('isEmpty', $validator->getMessages()['name']);
+        $this->assertArrayHasKey('birthDate', $validator->getMessages());
+        $this->assertArrayHasKey('dateFalseFormat', $validator->getMessages()['birthDate']);
+        $this->assertArrayHasKey('dateInvalidDate', $validator->getMessages()['birthDate']);
+        $this->assertArrayHasKey('typeAuth', $validator->getMessages());
+        $this->assertArrayHasKey('notInArray', $validator->getMessages()['typeAuth']);
+    }
+
+    public function testFilters(){
+        $validator = new UserValidator();
+        $this->dataProvider['name'] = '<a href="www.google.com.br">Joao</a>';
+        $this->dataProvider['id'] = 'Panqueca';
+        $validator->setData($this->dataProvider);
+        $data = $validator->getValues();
+        $this->assertEquals("Joao", $data['name']);
+        $this->assertEquals(0, $data['id']);
     }
 
 
