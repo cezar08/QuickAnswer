@@ -15,8 +15,6 @@ class UserEntity
 
     protected $name;
 
-    protected $picture;
-
     protected $email;
 
     protected $password;

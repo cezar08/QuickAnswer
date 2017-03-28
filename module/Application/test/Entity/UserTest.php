@@ -23,7 +23,7 @@ class UserTest extends TestCase
     public function testAmountAttributes()
     {
         $arrayCopy = (new User())->getArrayCopy();
-        $this->assertEquals(8, count($arrayCopy));
+        $this->assertEquals(7, count($arrayCopy));
 
         return $arrayCopy;
     }
@@ -35,11 +35,10 @@ class UserTest extends TestCase
     {
         $this->assertArrayHasKey('id', $arrayCopy);
         $this->assertArrayHasKey('name', $arrayCopy);
-        $this->assertArrayHasKey('picture', $arrayCopy);
         $this->assertArrayHasKey('email', $arrayCopy);
         $this->assertArrayHasKey('password', $arrayCopy);
         $this->assertArrayHasKey('birthDate', $arrayCopy);
         $this->assertArrayHasKey('typeAuth', $arrayCopy);
-        $this->assertArrayHasKey('universities', $arrayCopy);
+        $this->assertArrayHasKey('university', $arrayCopy);
     }
 }
