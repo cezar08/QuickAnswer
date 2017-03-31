@@ -25,7 +25,8 @@ class UserTest extends TestCase
         $this->assertEquals(8, count($arrayCopy));
 
         return $arrayCopy;
-    }/**
+    }
+    /**
  * Class UserTest
  * @package ApplicationTest\Entity
  * @group Entities
