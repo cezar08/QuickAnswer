@@ -15,8 +15,6 @@ class UserEntity
 
     protected $name;
 
-    protected $picture;
-
     protected $email;
 
     protected $password;
@@ -25,7 +23,7 @@ class UserEntity
 
     protected $typeAuth;
 
-    protected $universities;
+    protected $university;
 
     public function getArrayCopy()
     {
