@@ -9,10 +9,10 @@
  */
 
 /**
- * Interface for classes which matches an invocation based on its
+ * Interfaces for classes which matches an invocation based on its
  * method name, argument, order or call count.
  *
- * @since Interface available since Release 1.0.0
+ * @since Interfaces available since Release 1.0.0
  */
 interface PHPUnit_Framework_MockObject_Matcher_Invocation extends PHPUnit_Framework_SelfDescribing, PHPUnit_Framework_MockObject_Verifiable
 {

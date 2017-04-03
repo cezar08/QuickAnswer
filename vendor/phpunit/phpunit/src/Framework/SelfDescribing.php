@@ -9,9 +9,9 @@
  */
 
 /**
- * Interface for classes that can return a description of itself.
+ * Interfaces for classes that can return a description of itself.
  *
- * @since Interface available since Release 3.0.0
+ * @since Interfaces available since Release 3.0.0
  */
 interface PHPUnit_Framework_SelfDescribing
 {

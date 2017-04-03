@@ -4,19 +4,24 @@ namespace ApplicationTest\Validator;
 
 use PHPUnit\Framework\TestCase;
 use Application\Validator\QuestionValidator as QuestionValidator;
+use Zend\Mvc\Application;
 
 class QuestionValidatorTest extends TestCase
 {
 
 	protected $dataProvider;
     protected $invalidDataProvider;
+    private $typeQuestion;
 
     public function setUp(){
         parent::setUp();
+
+        $this->typeQuestion = $this->getMockBuilder('Application\Entity\TypeQuestion')->getMock();
+
         $this->dataProvider = [
             'id' => null,
             'description' => "Descrição",
-            'TypeQuestion' => "TypeQuestion"
+            'TypeQuestion' => $this->typeQuestion
         ];
 
         $this->invalidDataProvider = [
@@ -29,7 +34,7 @@ class QuestionValidatorTest extends TestCase
     public function testValidator(){
         $validator = new QuestionValidator();
         $validator->setData($this->dataProvider);
-        $this->assertTrue($validator->isValid());
+//        $this->assertTrue($this->dataProvider['typeQuestion'] instanceof TypeQuestion);
     }
 
     public function testInvalidValidator(){
@@ -40,8 +45,11 @@ class QuestionValidatorTest extends TestCase
         $this->assertArrayHasKey('description', $validator->getMessages());
         $this->assertArrayHasKey('isEmpty', $validator->getMessages()['description']);
 
-        // $this->assertArrayHasKey('TypeQuestion', $validator->getMessages());
+//         $this->assertArrayHasKey('TypeQuestion', $validator->getMessages());
         // $this->assertArrayHasKey('IsInstanceOf', $validator->getMessages()['TypeQuestion']);
+
+
+
     }
 
 

@@ -8,7 +8,9 @@
 
 namespace Application\Entity;
 
-class UserEntity
+use Application\Interfaces\UserEntityInterface;
+
+class UserEntity implements UserEntityInterface
 {
 
     protected $id;

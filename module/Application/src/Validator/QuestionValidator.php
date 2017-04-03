@@ -45,22 +45,22 @@ class QuestionValidator extends InputFilter
                 )
             )
         );
-        // $this->add(
-        //     $factory->createInput(
-        //         array(
-        //             'name' => 'TypeQuestion',
-        //             'required' => true,
-        //             'validators' => array(
-        //                 array(
-        //                     'name' => 'IsInstanceOf',
-        //                     'options' => array(
-        //                         'className' => 'TypeQuestion'
-        //                     )
-        //                 )
-        //             )
-        //         )
-        //     )
-        // );
+         $this->add(
+             $factory->createInput(
+                 array(
+                     'name' => 'TypeQuestion',
+                     'required' => true,
+                     'validators' => array(
+                         array(
+                             'name' => 'IsInstanceOf',
+                             'options' => array(
+                                 'className' => 'Application\Entity\TypeQuestion'
+                             )
+                         )
+                     )
+                 )
+             )
+         );
 	}
 
 }
