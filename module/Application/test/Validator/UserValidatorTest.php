@@ -3,13 +3,13 @@
 namespace ApplicationTest\Validator;
 
 
-
+use Application\Interfaces\UserEntityInterface;
+use Application\Validator\UserValidator;
 use PHPUnit\Framework\TestCase;
-use Application\Validator\UserValidator as UserValidator;
 
 /**
  * Class UserValidatorTest
- * @package Application\Validator
+ * @package ApplicationTest\Validator
  * @group Validator
  */
 class UserValidatorTest extends TestCase
@@ -19,41 +19,42 @@ class UserValidatorTest extends TestCase
 
     protected $invalidDataProvider;
 
-    public function setUp(){
+    public function setUp()
+    {
         parent::setUp();
         $this->dataProvider = [
             'id' => null,
-            'name' => "Teste",
-            'password' => "Xret34Pi",
-            'email' => "teste@gmail.com",
-            'pictures' => "img/pictures/test.jpg",
-            'birthDate' => "01/01/1990",
-            'typeAuth' => "FACEBOOK",
-            '$universitie' => "Unochapeco"
+            'name' => 'Joao',
+            'password' => 'Xret34Piy',
+            'email' => 'joao@gmail.com',
+            'picture' => 'img/pictures/AjcKlsdf.jpg',
+            'birthDate' => '01/01/1990',
+            'typeAuth' => 'FACEBOOK',
+            'university' => 'Unochapecó'
         ];
-
         $this->invalidDataProvider = [
-            'id' => null,
-            'name' => "",
-            'password' => "",
-            'email' => "maria",
-            'pictures' => "",
-            'birthDate' => "1990/01/01",
-            'typeAuth' => "INSTAGRAM",
-            '$universitie' => ""
+            'name' => '',
+            'password' => '',
+            'email' => 'maria',
+            'picture' => '',
+            'birthDate' => '1990/01/01',
+            'typeAuth' => 'INSTAGRAM',
+            'university' => ''
+
         ];
     }
 
-    public function testValidator(){
+    public function testValidator()
+    {
         $validator = new UserValidator();
         $validator->setData($this->dataProvider);
         $this->assertTrue($validator->isValid());
     }
 
-    public function testInvalidValidator(){
+    public function testInvalidValidator()
+    {
         $validator = new UserValidator();
         $validator->setData($this->invalidDataProvider);
-
         $this->assertFalse($validator->isValid());
         $this->assertArrayHasKey('name', $validator->getMessages());
         $this->assertArrayHasKey('isEmpty', $validator->getMessages()['name']);
@@ -64,15 +65,14 @@ class UserValidatorTest extends TestCase
         $this->assertArrayHasKey('notInArray', $validator->getMessages()['typeAuth']);
     }
 
-    public function testFilters(){
+    public function testFilters()
+    {
         $validator = new UserValidator();
-        $this->dataProvider['name'] = '<a href="www.google.com.br">Joao</a>';
-        $this->dataProvider['id'] = 'Panqueca';
+        $this->dataProvider['name'] = '<a href="www.google.com">Joao</a>                          ';
+        $this->dataProvider['id'] = 'panqueca';
         $validator->setData($this->dataProvider);
         $data = $validator->getValues();
         $this->assertEquals("Joao", $data['name']);
         $this->assertEquals(0, $data['id']);
     }
-
-
 }

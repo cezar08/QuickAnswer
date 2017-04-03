@@ -2,8 +2,7 @@
 
 namespace Application\Interfaces;
 
-interface UserEntityInterface
+interface UserInviteEntityInterface
 {
 
 }
-

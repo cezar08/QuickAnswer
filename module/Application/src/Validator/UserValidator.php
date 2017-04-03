@@ -7,133 +7,131 @@ use Zend\InputFilter\Factory as InputFactory;
 
 class UserValidator extends InputFilter
 {
+
+
     public function __construct()
     {
         $factory = new InputFactory();
-
         $this->add(
             $factory->createInput(
-                array(
+                [
                     'name' => 'id',
                     'required' => false,
-                    'filters' => array(
-                        array(
-                            'name' => 'Int'
-                        )
-                    )
-                )
+                    'filters' =>
+                        [
+                            [
+                                'name' => 'Int'
+                            ]
+                        ]
+                ]
             )
         );
         $this->add(
             $factory->createInput(
-                array(
+                [
                     'name' => 'name',
                     'required' => true,
-                    'filters' => array(
-                        array('name' => 'StripTags'),
-                        array('name' => 'StringTrim')
-                    ),
-                    'validators' => array(
-                        array(
+                    'filters' => [
+                        ['name' => 'StripTags'],
+                        ['name' => 'StringTrim']
+                    ],
+                    'validators' => [
+                        [
                             'name' => 'StringLength',
-                            'options' => array(
-                                'UTF-8',
+                            'options' => [
+                                'encoding' => 'UTF-8',
                                 'min' => 3,
                                 'max' => 60
-                            )
-                        )
-                    )
-                )
+                            ]
+                        ]
+                    ],
+                ]
             )
         );
         $this->add(
             $factory->createInput(
-                array(
+                [
                     'name' => 'password',
                     'required' => false,
-                    'validators' => array(
-                        array(
+                    'validators' => [
+                        [
                             'name' => 'StringLength',
-                            'options' => array(
+                            'options' => [
                                 'encoding' => 'UTF-8',
                                 'min' => 6,
                                 'max' => 60
-                            )
-                        )
-                    )
-                )
+                            ]
+                        ]
+                    ]
+                ]
             )
         );
         $this->add(
             $factory->createInput(
-                array(
+                [
                     'name' => 'email',
                     'required' => true,
-                    'validator' => array(
-                        array(
-                            'name' => 'EmailAdress'
-                        )
-                    )
-                )
-
+                    'valildators' => [
+                        'name' => 'EmailAddress'
+                    ]
+                ]
             )
         );
         $this->add(
             $factory->createInput(
-                array(
-                    'name' => 'birthDate',
-                    'required' => false,
-                    'validators' => array(
-                        array(
-                            'name' => 'Date',
-                            'options' => array(
-                                'format' => 'd/m/Y'
-                            )
-                        )
-                    )
-                )
+                [
+                  'name' => 'birthDate',
+                  'required' => false,
+                  'validators' => [
+                      [
+                         'name' => 'Date',
+                          'options' => [
+                              'format' => 'd/m/Y'
+                          ]
+                      ]
 
+                  ]
+                ]
             )
         );
         $this->add(
             $factory->createInput(
-                array(
+                [
                     'name' => 'typeAuth',
                     'required' => true,
-                    'validators' => array(
-                        array(
+                    'validators' => [
+                        [
                             'name' => 'InArray',
-                            'options' => array(
-                                'haystack' => array('FACEBOOK', 'GMAIL', 'LOCAL')
-                            )
-                        )
-                    )
-                )
-
+                            'options' => [
+                                'haystack' => ['FACEBOOK', 'GMAIL', 'LOCAL']
+                            ]
+                        ]
+                    ]
+                ]
             )
         );
         $this->add(
             $factory->createInput(
-                array(
-                    'name' => 'universitie',
+                [
+                    'name' => 'university',
                     'required' => false,
-                    'filters' => array(
-                        array('name' => 'StripTags'),
-                        array('name' => 'StringTrim')
-                    ),
-                    'validators' => array(
-                        array(
+                    'filters' => [
+                        ['name' => 'StripTags'],
+                        ['name' => 'StringTrim']
+                    ],
+                    'validators' => [
+                        [
                             'name' => 'StringLength',
-                            'options' => array(
-                                'UTF-8',
+                            'options' => [
+                                'encoding' => 'UTF-8',
                                 'min' => 3,
                                 'max' => 60
-                            )
-                        )
-                    )
-                )
+                            ]
+                        ]
+                    ],
+                ]
             )
         );
     }
-
 }
+

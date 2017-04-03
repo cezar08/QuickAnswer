@@ -8,6 +8,9 @@
 
 namespace ApplicationTest\Entity;
 
+use Application\Entity\Entity;
+use Application\Entity\UserEntity;
+use Application\Interfaces\UserEntityInterface;
 use PHPUnit\Framework\TestCase;
 use Application\Entity\UserEntity as User;
 
@@ -19,6 +22,21 @@ use Application\Entity\UserEntity as User;
 
 class UserTest extends TestCase
 {
+
+    public function testImplements()
+    {
+        $user = new UserEntity();
+        $this->assertInstanceOf(UserEntityInterface::class, $user);
+    }
+
+    public function testInherit()
+    {
+        $user = new UserEntity();
+        $this->assertInstanceOf(
+            Entity::class,
+            $user
+        );
+    }
 
     public function testAmountAttributes()
     {
@@ -40,5 +58,6 @@ class UserTest extends TestCase
         $this->assertArrayHasKey('birthDate', $arrayCopy);
         $this->assertArrayHasKey('typeAuth', $arrayCopy);
         $this->assertArrayHasKey('universitie', $arrayCopy);
+
     }
 }
