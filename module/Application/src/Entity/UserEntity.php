@@ -1,14 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: cezar
- * Date: 13/03/17
- * Time: 21:46
- */
+
 
 namespace Application\Entity;
 
-class UserEntity
+use Application\Interfaces\UserEntityInterface;
+
+class UserEntity extends Entity implements UserEntityInterface
 {
 
     protected $id;
@@ -24,9 +21,4 @@ class UserEntity
     protected $typeAuth;
 
     protected $university;
-
-    public function getArrayCopy()
-    {
-        return get_object_vars($this);
-    }
 }
