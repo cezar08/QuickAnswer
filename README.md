@@ -1,0 +1,2 @@
+# QuickAnswer
+Lula preso.
