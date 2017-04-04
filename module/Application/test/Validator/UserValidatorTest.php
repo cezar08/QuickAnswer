@@ -2,7 +2,6 @@
 
 namespace ApplicationTest\Validator;
 
-
 use Application\Interfaces\UserEntityInterface;
 use Application\Validator\UserValidator;
 use PHPUnit\Framework\TestCase;

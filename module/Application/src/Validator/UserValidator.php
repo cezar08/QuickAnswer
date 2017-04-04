@@ -8,7 +8,6 @@ use Zend\InputFilter\Factory as InputFactory;
 class UserValidator extends InputFilter
 {
 
-
     public function __construct()
     {
         $factory = new InputFactory();
@@ -134,4 +133,3 @@ class UserValidator extends InputFilter
         );
     }
 }
-

@@ -42,7 +42,6 @@ class UserTest extends TestCase
     {
         $arrayCopy = (new User())->getArrayCopy();
         $this->assertEquals(7, count($arrayCopy));
-
         return $arrayCopy;
     }
 
@@ -58,6 +57,5 @@ class UserTest extends TestCase
         $this->assertArrayHasKey('birthDate', $arrayCopy);
         $this->assertArrayHasKey('typeAuth', $arrayCopy);
         $this->assertArrayHasKey('universitie', $arrayCopy);
-
     }
 }

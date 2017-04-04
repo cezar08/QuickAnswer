@@ -8,59 +8,58 @@ use Zend\InputFilter\Factory as InputFactory;
 class QuestionValidator extends InputFilter
 {
 
-	public function __construct()
+    public function __construct()
     {
         $factory = new InputFactory();
 
         $this->add(
             $factory->createInput(
-                array(
+                [
                     'name' => 'id',
                     'required' => false,
-                    'filters' => array(
-                        array(
+                    'filters' => [
+                        [
                             'name' => 'Int'
-                        )
-                    )
-                )
+                        ]
+                    ]
+                ]
             )
         );
         $this->add(
             $factory->createInput(
-                array(
+                [
                     'name' => 'description',
                     'required' => true,
-                    'filters' => array(
-                        array('name' => 'StripTags'),
-                        array('name' => 'StringTrim')
-                    ),
-                    'validators' => array(
-                        array(
+                    'filters' => [
+                        ['name' => 'StripTags'],
+                        ['name' => 'StringTrim']
+                    ],
+                    'validators' => [
+                        [
                             'name' => 'StringLength',
-                            'options' => array(
+                            'options' => [
                                 'UTF-8'
-                            )
-                        )
-                    )
-                )
+                            ]
+                        ]
+                    ]
+                ]
             )
         );
          $this->add(
              $factory->createInput(
-                 array(
+                 [
                      'name' => 'TypeQuestion',
                      'required' => true,
-                     'validators' => array(
-                         array(
+                     'validators' => [
+                         [
                              'name' => 'IsInstanceOf',
-                             'options' => array(
+                             'options' => [
                                  'className' => 'Application\Entity\TypeQuestion'
-                             )
-                         )
-                     )
-                 )
+                             ]
+                         ]
+                     ]
+                 ]
              )
          );
-	}
-
+    }
 }

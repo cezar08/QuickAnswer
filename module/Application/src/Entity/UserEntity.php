@@ -5,7 +5,6 @@ namespace Application\Entity;
 
 use Application\Interfaces\UserEntityInterface;
 
-
 class UserEntity extends Entity implements UserEntityInterface
 {
 
