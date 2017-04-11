@@ -1,11 +1,11 @@
 <?php
 namespace Application\Entity;
 
-class TypeMutipleOptionsEntity
+class TypeQuickAnswer
 {
     protected $id;
 
-    protected $Choices;
+    protected $answer;
 
     public function getArrayCopy()
     {
