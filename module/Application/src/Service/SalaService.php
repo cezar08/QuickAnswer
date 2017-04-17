@@ -61,6 +61,16 @@ class PerfilService extends Service
         return $select->getQuery()->getResult();
     }
 
+    /*
+    * Busca a sala e retorna um objeto da mesma
+    */
+    private function buscaSalaObjeto ($id) {
+        $sala = $this->getEntityManager()
+            ->find('QuickAnswer\Module\Application\Entity\SalaEntity', $id);
+
+        return $sala;
+
+    }
     protected function validacao($dados)
     {
         $validator = new SalaValidator();
@@ -80,5 +90,33 @@ class PerfilService extends Service
         } catch (\Exception $e) {
             return array('error' => 'Erro ao salvar: '.$e->getMEssage());
         }
+    }
+
+    public function editar ($id, $dados)
+    {
+        $sala = $this->buscaSalaObjeto($id);
+        $validator = $this->validacao($dados);
+        $this->dadosAtualizar($sala, $validator->getValues());
+    }
+
+    public function dadosParaEditar ($sala, $dados)
+    {
+        $sala->nomeSala = $dados['nomeSala'];
+        $sala->dataCriacao = $dados['dataCriacao'];
+        $sala->tipo = $dados['tipo'];
+        $sala->usuario = $dados['usuario'];
+        $sala->perguntas = $dados['perguntas'];
+
+        $this->getEntityManager()->persistir($sala);
+        $this->getEntityManager()->flush();
+    }
+
+    public function excluir ($id) 
+    {
+        $sala = $this->buscaSalaObjeto($id);
+        $this->getEntityManager()->remove($sala);
+        $this->getEntityManager()->flush();
+
+        return true;
     }
 }
