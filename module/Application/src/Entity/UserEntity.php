@@ -54,5 +54,18 @@ class UserEntity extends Entity implements UserEntityInterface
 
     protected $typeAuth;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="UniversityEntity")
+     * @ORM\JoinTable(name="user_has_university_qa",
+     * joinColumns={@ORM\JoinColumn(name="user_id",
+     *     referencedColumnName="id")
+     * },
+     *     inverseJoinColumns={@ORM\JoinColumn(
+     *     name="university_id", referencedColumnName="id")
+     * }
+     * )
+     *
+     * @var ArrayCollection
+     */
     protected $university;
 }
