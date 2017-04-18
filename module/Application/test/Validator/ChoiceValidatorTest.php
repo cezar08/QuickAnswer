@@ -25,7 +25,7 @@ class ChoiceValidatorTest extends TestCase
         $this->invalidDataProvider = [
 
             'DescriptionChoice' => "",
-            'correct' => ""
+            'correct' => null
         ];
     }
 

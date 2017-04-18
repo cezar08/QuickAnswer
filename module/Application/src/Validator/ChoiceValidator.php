@@ -20,7 +20,7 @@ class ChoiceValidator extends InputFilter
         $this->add(
             $factory->createInput(
                 [
-                    'name' => 'description',
+                    'name' => 'DescriptionChoice',
                     'required' => true,
                     'filters' => array(
                         array('name' => 'StripTags'),
@@ -46,12 +46,7 @@ class ChoiceValidator extends InputFilter
                     'required' => true,
                     'validators' => array(
                         array(
-                            'name' => 'correct',
-                            'options' => array(
-                                'Boolean',
-                                'min' => 0,
-                                'max' => 1
-                            )
+                            'name' => 'StringLength'
                         )
                     )
                 ]
