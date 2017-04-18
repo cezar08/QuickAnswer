@@ -2,7 +2,6 @@
 
 namespace Application\Validator;
 
-
 use Zend\InputFilter\InputFilter;
 use Zend\InputFilter\Factory as InputFactory;
 

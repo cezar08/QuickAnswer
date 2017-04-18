@@ -2,7 +2,6 @@
 
 namespace ApplicationTest\Validator;
 
-
 use Application\Entity\UserInviteEntity;
 use Application\Validator\UserInviteValidator;
 use PHPUnit\Framework\TestCase;
@@ -18,6 +17,11 @@ class UserInviteValidatorTest extends TestCase
 
     protected $invalidData;
 
+    /**
+     * Seta um objeto com dados válidos, e outro
+     * com dados inválidos para serem usados nos
+     * testes.
+     */
     public function setUp()
     {
         parent::setUp();
@@ -35,6 +39,10 @@ class UserInviteValidatorTest extends TestCase
         ];
     }
 
+    /**
+     * Testa a inserção de dados válidos
+     * para testar o validator.
+     */
     public function testValidator()
     {
         $validator = new UserInviteValidator();
@@ -43,6 +51,10 @@ class UserInviteValidatorTest extends TestCase
         $this->assertTrue($validator->isValid());
     }
 
+    /**
+     * Testa a inserção de dados inválidos e
+     * verifica as mensagens de erro.
+     */
     public function testInvalidValidator()
     {
         $validator = new UserInviteValidator();
@@ -53,6 +65,9 @@ class UserInviteValidatorTest extends TestCase
         $this->assertArrayHasKey('isEmpty', $validator->getMessages()['id_sala']);
     }
 
+    /**
+     * Teste dos filtros do validator.
+     */
     public function testFilters()
     {
         $id = 1;
