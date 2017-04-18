@@ -41,6 +41,24 @@ return [
             Controller\IndexController::class => InvokableFactory::class,
         ],
     ],
+
+    'doctrine' => [
+        'driver' => [
+            'driver' => [
+                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
+                'cache' => 'array',
+                'paths' => [
+                    __DIR__.'/../src/Entity'
+                ],
+            ],
+            'orm_default' => [
+                'drivers' => [
+                    'Application\Entity' => 'driver'
+                ]
+            ]
+        ]
+    ],
+
     'view_manager' => [
         'display_not_found_reason' => true,
         'display_exceptions'       => true,
