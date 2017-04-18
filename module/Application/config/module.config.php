@@ -62,8 +62,10 @@ return [
     ],
     'service_manager' => [
       'factories' => [
-          'AuthService' => function () {
-            return new AuthService();
+          'AuthService' => function ($sm) {
+            $entityManager = $sm->get('Doctrine\ORM\EntityManager');
+
+            return new AuthService($entityManager);
           },
       ]
     ],

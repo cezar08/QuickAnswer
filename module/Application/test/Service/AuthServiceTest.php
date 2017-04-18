@@ -2,6 +2,7 @@
 
 namespace ApplicationTest\Service;
 
+use Application\Entity\UserEntity;
 use Application\Service\AuthService;
 use Zend\Stdlib\ArrayUtils;
 
@@ -34,9 +35,18 @@ class AuthServiceTest extends \ApplicationTest\Service\AbstractServiceTestCase
             'email' => 'joao',
             'password' => ''
         ];
+
+        $user = new UserEntity();
+        $user->email = $this->validData['email'];
+        $user->password = password_hash($this->validData['password'], PASSWORD_DEFAULT);
+        $user->name = 'João';
+        $entityManager = $this->getApplicationServiceLocator()
+            ->get('Doctrine\ORM\EntityManager');
+        $entityManager->persist($user);
+        $entityManager->flush();
     }
 
-    public function testDataBaseAuth()
+    public function testDataBaseValidateAuth()
     {
         $serviceAuth = $this->getApplicationServiceLocator()
             ->get('AuthService');
@@ -45,5 +55,30 @@ class AuthServiceTest extends \ApplicationTest\Service\AbstractServiceTestCase
         ));
         $response = $serviceAuth->dataBaseAuth($this->invalidData);
         $this->assertArrayHasKey("error", $response);
+    }
+
+    public function testInvalidLogin()
+    {
+        $serviceAuth = $this->getApplicationServiceLocator()
+            ->get('AuthService');
+        $response = $serviceAuth->dataBaseAuth(
+            ['email' => 'maria@gmail.com', 'password' => '123345678']
+        );
+        $this->assertArrayHasKey("error", $response);
+        $this->assertEquals('Usuário ou senha inválidos!', $response['error']);
+    }
+
+    public function testPassCriptDataBase()
+    {
+        $entityManager = $this->getApplicationServiceLocator()
+            ->get('Doctrine\ORM\EntityManager');
+        $users = $entityManager->getRepository(
+            '\Application\Entity\UserEntity'
+        )->findAll();
+        $this->assertEquals(1, count($users));
+        $user = $users[0];
+        $this->assertEquals(1, $user->id);
+        $this->assertEquals("João", $user->name);
+        $this->assertNotEquals("aeRtX21", $user->password);
     }
 }

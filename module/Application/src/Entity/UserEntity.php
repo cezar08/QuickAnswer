@@ -3,6 +3,7 @@
 namespace Application\Entity;
 
 use Application\Interfaces\UserEntityInterface;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -68,4 +69,9 @@ class UserEntity extends Entity implements UserEntityInterface
      * @var ArrayCollection
      */
     protected $university;
+
+    public function __construct()
+    {
+        $this->university = new ArrayCollection();
+    }
 }
