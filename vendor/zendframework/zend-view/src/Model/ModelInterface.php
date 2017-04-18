@@ -13,7 +13,7 @@ use Countable;
 use IteratorAggregate;
 
 /**
- * Interface describing a view model.
+ * Interfaces describing a view model.
  *
  * Extends "Countable"; count() should return the number of children attached
  * to the model.

@@ -10,7 +10,7 @@
 namespace Zend\EventManager;
 
 /**
- * Interface for shared event listener collections
+ * Interfaces for shared event listener collections
  */
 interface SharedEventManagerInterface
 {

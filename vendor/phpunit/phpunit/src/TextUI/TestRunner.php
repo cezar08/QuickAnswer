@@ -20,7 +20,7 @@ use SebastianBergmann\CodeCoverage\Report\Xml\Facade as XmlReport;
 use SebastianBergmann\Environment\Runtime;
 
 /**
- * A TestRunner for the Command Line Interface (CLI)
+ * A TestRunner for the Command Line Interfaces (CLI)
  * PHP SAPI Module.
  *
  * @since Class available since Release 2.0.0

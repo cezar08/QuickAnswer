@@ -11,7 +11,7 @@
 namespace SebastianBergmann\Diff\LCS;
 
 /**
- * Interface for implementations of longest common subsequence calculation.
+ * Interfaces for implementations of longest common subsequence calculation.
  */
 interface LongestCommonSubsequence
 {

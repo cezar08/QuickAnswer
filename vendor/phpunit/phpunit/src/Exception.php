@@ -11,7 +11,7 @@
 /**
  * Marker interface for PHPUnit exceptions.
  *
- * @since      Interface available since Release 4.0.0
+ * @since      Interfaces available since Release 4.0.0
  */
 interface PHPUnit_Exception
 {

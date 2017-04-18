@@ -10,7 +10,7 @@ namespace Zend\ServiceManager\Factory;
 use Interop\Container\ContainerInterface;
 
 /**
- * Interface for an abstract factory.
+ * Interfaces for an abstract factory.
  *
  * An abstract factory extends the factory interface, but also has an
  * additional "canCreate" method, which is called to check if the abstract

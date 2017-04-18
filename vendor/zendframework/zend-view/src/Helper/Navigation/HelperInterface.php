@@ -14,7 +14,7 @@ use Zend\Permissions\Acl;
 use Zend\View\Helper\HelperInterface as BaseHelperInterface;
 
 /**
- * Interface for navigational helpers
+ * Interfaces for navigational helpers
  */
 interface HelperInterface extends BaseHelperInterface
 {

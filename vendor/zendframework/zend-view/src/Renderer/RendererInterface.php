@@ -13,7 +13,7 @@ use Zend\View\Model\ModelInterface;
 use Zend\View\Resolver\ResolverInterface;
 
 /**
- * Interface class for Zend\View\Renderer\* compatible template engine implementations
+ * Interfaces class for Zend\View\Renderer\* compatible template engine implementations
  */
 interface RendererInterface
 {

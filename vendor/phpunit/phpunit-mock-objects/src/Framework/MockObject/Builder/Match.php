@@ -11,7 +11,7 @@
 /**
  * Builder interface for invocation order matches.
  *
- * @since Interface available since Release 1.0.0
+ * @since Interfaces available since Release 1.0.0
  */
 interface PHPUnit_Framework_MockObject_Builder_Match extends PHPUnit_Framework_MockObject_Builder_Stub
 {

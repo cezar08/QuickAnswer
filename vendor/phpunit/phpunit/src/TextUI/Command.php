@@ -9,7 +9,7 @@
  */
 
 /**
- * A TestRunner for the Command Line Interface (CLI)
+ * A TestRunner for the Command Line Interfaces (CLI)
  * PHP SAPI Module.
  *
  * @since Class available since Release 3.0.0

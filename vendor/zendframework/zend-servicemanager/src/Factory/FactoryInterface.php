@@ -13,7 +13,7 @@ use Zend\ServiceManager\Exception\ServiceNotCreatedException;
 use Zend\ServiceManager\Exception\ServiceNotFoundException;
 
 /**
- * Interface for a factory
+ * Interfaces for a factory
  *
  * A factory is an callable object that is able to create an object. It is
  * given the instance of the service locator, the requested name of the class

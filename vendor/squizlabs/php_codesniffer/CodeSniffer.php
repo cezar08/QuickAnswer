@@ -37,7 +37,7 @@ if (class_exists('PHP_CodeSniffer_CLI', true) === false) {
 }
 
 if (interface_exists('PHP_CodeSniffer_Sniff', true) === false) {
-    throw new PHP_CodeSniffer_Exception('Interface PHP_CodeSniffer_Sniff not found');
+    throw new PHP_CodeSniffer_Exception('Interfaces PHP_CodeSniffer_Sniff not found');
 }
 
 /**

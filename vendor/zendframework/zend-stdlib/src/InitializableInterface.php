@@ -10,7 +10,7 @@
 namespace Zend\Stdlib;
 
 /**
- * Interface to allow objects to have initialization logic
+ * Interfaces to allow objects to have initialization logic
  */
 interface InitializableInterface
 {

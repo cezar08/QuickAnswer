@@ -16,7 +16,7 @@
  * is recorded using id() and then defined in order using
  * PHPUnit_Framework_MockObject_Builder_Match::after().
  *
- * @since Interface available since Release 1.0.0
+ * @since Interfaces available since Release 1.0.0
  */
 interface PHPUnit_Framework_MockObject_Builder_Identity
 {

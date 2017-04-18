@@ -41,6 +41,24 @@ return [
             Controller\IndexController::class => InvokableFactory::class,
         ],
     ],
+    'doctrine' => [
+        'driver' => [
+            'driver' => [
+                //define um driver de notação para a pasta src/Entity
+                // (poderia ser varias pastas), e o nome do driver é 'driver'
+                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
+                'cache' => 'array',
+                'paths' => [
+                    __DIR__ . '/../src/Entity'
+                ]
+            ],
+            'orm_default' => [
+                'drivers' => [ //registra o 'driver' para qualquer entidade na namespace Application\Entity
+                    'Application\Entity' => 'driver'
+                ]
+            ]
+        ]
+    ],
     'view_manager' => [
         'display_not_found_reason' => true,
         'display_exceptions'       => true,

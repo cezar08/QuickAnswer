@@ -12,7 +12,7 @@ namespace Zend\EventManager\Filter;
 use Zend\EventManager\ResponseCollection;
 
 /**
- * Interface for intercepting filter chains
+ * Interfaces for intercepting filter chains
  */
 interface FilterInterface
 {

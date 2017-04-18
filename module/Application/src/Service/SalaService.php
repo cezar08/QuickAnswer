@@ -1,9 +1,11 @@
 <?php
-
+/**
+ * @author Jean/Marcos
+ */
 namespace Service;
 
-use Entity\Sala;
-use Validator\SalaValidator;
+use Application\Entity\SalaEntity;
+use Application\Validator\SalaValidator;
 
 class PerfilService extends Service
 {
@@ -36,7 +38,7 @@ class PerfilService extends Service
     public function listarSalas($dados, $usuario)
     {
         $salas = $this->buscaSala($dados);
-        $usuario = //presumo que deva existir um metodo que busque um usuario e retorne um objeto
+        $usuario = " "; //presumo que deva existir um metodo que busque um usuario e retorne um objeto
 
         foreach ($salas as $key => $sala) {
             if($sala.tipo == "privado" && $sala.usuario != $usuario.id) {
@@ -47,6 +49,7 @@ class PerfilService extends Service
         return $salas;
 
     }
+
     private function buscaSala($dados)
     {
         $sala = $dados['sala'];

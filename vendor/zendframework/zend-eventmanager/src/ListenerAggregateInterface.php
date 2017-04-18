@@ -10,7 +10,7 @@
 namespace Zend\EventManager;
 
 /**
- * Interface for self-registering event listeners.
+ * Interfaces for self-registering event listeners.
  *
  * Classes implementing this interface may be registered by name or instance
  * with an EventManager, without an event name. The {@link attach()} method will

@@ -33,7 +33,7 @@ To enable development mode, the following file MUST exist:
 
 Optionally:
 
-- config/autoload/development.local.php.dist; this file will be copied to
+- config/autoload/development.local.php; this file will be copied to
   config/autoload/development.local.php
 
 When disabling development mode:

@@ -10,7 +10,7 @@ namespace Zend\ServiceManager\Initializer;
 use Interop\Container\ContainerInterface;
 
 /**
- * Interface for an initializer
+ * Interfaces for an initializer
  *
  * An initializer can be registered to a service locator, and are run after an instance is created
  * to inject additional dependencies through setters
