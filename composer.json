@@ -19,7 +19,8 @@
         "squizlabs/php_codesniffer": "*",
         "zendframework/zend-validator": "^2.9",
         "zendframework/zend-filter": "^2.7",
-        "zendframework/zend-inputfilter": "^2.7"
+        "zendframework/zend-inputfilter": "^2.7",
+        "doctrine/doctrine-orm-module": "^1.1"
     },
     "autoload": {
         "psr-4": {

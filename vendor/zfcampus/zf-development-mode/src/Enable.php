@@ -16,7 +16,7 @@ class Enable
     const DEVEL_CONFIG      = 'config/development.config.php';
     const DEVEL_CONFIG_DIST = 'config/development.config.php.dist';
     const DEVEL_LOCAL       = 'config/autoload/development.local.php';
-    const DEVEL_LOCAL_DIST  = 'config/autoload/development.local.php.dist';
+    const DEVEL_LOCAL_DIST  = 'config/autoload/development.local.php';
 
     /**
      * @var resource
