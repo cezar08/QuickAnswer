@@ -29,7 +29,7 @@ class UserInviteValidator extends InputFilter
         $this->add(
             $factory->createInput(
                 [
-                    'name' => 'id_user',
+                    'name' => 'user',
                     'required' => true,
                     'filters' =>
                         [
@@ -44,12 +44,27 @@ class UserInviteValidator extends InputFilter
         $this->add(
             $factory->createInput(
                 [
-                    'name' => 'id_sala',
+                    'name' => 'room',
                     'required' => true,
                     'filters' =>
                         [
                             [
                             'name' => 'Int'
+                            ]
+                        ]
+                ]
+            )
+        );
+
+        $this->add(
+            $factory->createInput(
+                [
+                    'name' => 'accepted',
+                    'required' => true,
+                    'filters' =>
+                        [
+                            [
+                                'name' => 'Boolean'
                             ]
                         ]
                 ]

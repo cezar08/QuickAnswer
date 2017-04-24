@@ -28,14 +28,16 @@ class UserInviteValidatorTest extends TestCase
 
         $this->validData = [
             'id' => null,
-            'id_user' => 1,
-            'id_sala' => 1
+            'user' => 1,
+            'room' => 1,
+            'accepted' => true
         ];
 
         $this->invalidData = [
             'id' => null,
-            'id_user' => null,
-            'id_sala' => null
+            'user' => null,
+            'room' => null,
+            'accepted' => false
         ];
     }
 
@@ -61,8 +63,9 @@ class UserInviteValidatorTest extends TestCase
         $validator->setData($this->invalidData);
 
         $this->assertFalse($validator->isValid());
-        $this->assertArrayHasKey('isEmpty', $validator->getMessages()['id_user']);
-        $this->assertArrayHasKey('isEmpty', $validator->getMessages()['id_sala']);
+        $this->assertArrayHasKey('isEmpty', $validator->getMessages()['user']);
+        $this->assertArrayHasKey('isEmpty', $validator->getMessages()['room']);
+        $this->assertArrayHasKey('isEmpty', $validator->getMessages()['accepted']);
     }
 
     /**
@@ -73,13 +76,15 @@ class UserInviteValidatorTest extends TestCase
         $id = 1;
         $validator = new UserInviteValidator();
         $this->validData['id'] = $id.'String';
-        $this->validData['id_user'] = $id.'Strign';
-        $this->validData['id_sala'] = $id.'String';
+        $this->validData['user'] = $id.'String';
+        $this->validData['room'] = $id.'String';
+        $this->validData['accepted'] = null;
         $validator->setData($this->validData);
         $data = $validator->getValues();
 
         $this->assertEquals(1, $data['id']);
-        $this->assertEquals(1, $data['id_user']);
-        $this->assertEquals(1, $data['id_sala']);
+        $this->assertEquals(1, $data['user']);
+        $this->assertEquals(1, $data['room']);
+        $this->assertFalse($data['accepted']);
     }
 }
