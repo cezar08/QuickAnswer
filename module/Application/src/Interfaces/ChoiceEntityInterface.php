@@ -2,7 +2,7 @@
 
 namespace Application\Interfaces;
 
-interface ChoiceInviteEntityInterface
+interface ChoiceInterface
 {
 
 }
