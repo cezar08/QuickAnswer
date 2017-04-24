@@ -6,13 +6,8 @@ use Application\Interfaces\MidiaInterface;
 class Midia extends Entity implements MidiaInterface
 {
     protected $id;
-
     protected $typeofmidia;
-
     protected $description;
-
-    protected $data;
-
+    protected $dateMidia;
     protected $path;
-
 }
