@@ -34,7 +34,7 @@ class UserInviteTest extends TestCase
     public function testAmountAttributes()
     {
         $arrayCopy = (new UserInvite())->getArrayCopy();
-        $this->assertEquals(3, count($arrayCopy));
+        $this->assertEquals(4, count($arrayCopy));
 
         return $arrayCopy;
     }
@@ -47,7 +47,8 @@ class UserInviteTest extends TestCase
     public function testNamesAttributes($arrayCopy)
     {
         $this->assertArrayHasKey('id', $arrayCopy);
-        $this->assertArrayHasKey('id_user', $arrayCopy);
-        $this->assertArrayHasKey('id_sala', $arrayCopy);
+        $this->assertArrayHasKey('user', $arrayCopy);
+        $this->assertArrayHasKey('room', $arrayCopy);
+        $this->assertArrayHasKey('accepted', $arrayCopy);
     }
 }
