@@ -54,4 +54,13 @@ class AuthService implements AuthServiceInterface
         }
     }
 
+
+    public function facebookAuth($data){
+
+    }
+
+    public function gmailAuth($data){
+
+    }
+
 }
