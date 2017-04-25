@@ -27,6 +27,7 @@ class QuestionValidator extends InputFilter
         );
         $this->add(
             $factory->createInput(
+
                 [
                     'name' => 'description',
                     'required' => true,
