@@ -34,7 +34,7 @@ class SalaService
         $dados = $validator->getValues();
         $salaBanco = $this->buscaSala($dados);
 
-        if (! $validator->isValid()) {
+        if(!$validator->isValid()) {
             throw new ValidatorException(
                 'Dados inválidos',
                 null,
@@ -42,9 +42,9 @@ class SalaService
                 $validator->getMessages()
             );
         }
-
-        if (sizeof($salaBanco) != 0) {
-            $result = ['error' => 'Já existe uma sala'];
+        
+        if(sizeof($salaBanco) != 0) {
+            $result = array('error' => 'existe');
         } else {
             $result = new Sala();
             $result - $this->persistir($result, $dados);
@@ -68,7 +68,7 @@ class SalaService
         $usuario = " "; //presumo que deva existir um metodo que busque um usuario e retorne um objeto
 
         foreach ($salas as $key => $sala) {
-            if ($sala.tipo == "privado" && $sala.usuario != $usuario.id) {
+            if($sala.tipo == "privado" && $sala.usuario != $usuario.id) {
                 unset($sala);
             }
         }
@@ -145,7 +145,7 @@ class SalaService
                 ->persist($sala);
             $this->entityManager->flush();
         } catch (\Exception $e) {
-            return ['error' => 'Erro ao salvar: '.$e->getMEssage()];
+            return array('error' => 'Erro ao salvar: '.$e->getMEssage());
         }
     }
 
@@ -161,7 +161,7 @@ class SalaService
     {
         $sala = $this->buscaSalaObjeto($id);
         $validator = $this->validacao($dados);
-        $this->dadosParaEditar($sala, $validator->getValues());
+        $this->dadosAtualizar($sala, $validator->getValues());
     }
 
     /**

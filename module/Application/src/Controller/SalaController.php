@@ -17,8 +17,32 @@ class SalaController extends AbstractActionController
         return new ViewModel(['salas' => $salas]);
     }
 
+<<<<<<< HEAD
     public function buscaSalasAction()
+=======
+    public function buscarSalasAction()
+>>>>>>> 895279ff0ba9f4372001c5d8c92215c43866f262
     {
+        //pastel
+    }
 
+    public function criarSalaAction()
+    {
+        //pastel
+    }
+
+    public function editarSalaAction()
+    {
+        //pastel
+    }
+
+    public function excluirSalaAction()
+    {
+        //pastel
+    }
+
+    public function listarSalasAction()
+    {
+        //pastel
     }
 }
