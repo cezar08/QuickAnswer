@@ -51,7 +51,6 @@ class UserEntity extends Entity implements UserEntityInterface
      *
      * @var \DateTime
      */
-    protected $birthDate;
 
     protected $typeAuth;
 
