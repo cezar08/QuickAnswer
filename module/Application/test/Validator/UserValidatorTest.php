@@ -39,7 +39,6 @@ class UserValidatorTest extends TestCase
             'birthDate' => '1990/01/01',
             'typeAuth' => 'INSTAGRAM',
             'university' => ''
-
         ];
     }
 
