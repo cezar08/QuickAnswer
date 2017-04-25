@@ -2,6 +2,10 @@
 
 namespace Application\Interfaces;
 
+/**
+ * Interface AuthServiceInterface
+ * @package Application\Interfaces
+ */
 
 interface AuthServiceInterface
 {
