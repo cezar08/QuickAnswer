@@ -15,7 +15,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="sale_qa")
  */
-class SalaEntity
+class SalaEntity extends Entity
 {
     /**
      * @ORM\Id

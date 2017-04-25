@@ -12,10 +12,12 @@ class SalaController extends AbstractActionController
 {
     public function indexAction()
     {
-        return new ViewModel();
+        $salas = ['Sala1', 'Sala2', 'Sala3']; //executa o serviço q vai no banco e pega as salas
+
+        return new ViewModel(['salas' => $salas]);
     }
 
-    public function buscaSalas()
+    public function buscaSalasAction()
     {
 
     }

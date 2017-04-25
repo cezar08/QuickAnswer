@@ -1,46 +1,79 @@
 <?php
-    namespace Spn\Service;
+    namespace Application\test\Service;
 
     use PHPUnit\Framework\TestCase;
-    use QuickAnswer\Module\Application\src\Entity\SalaEntity;
-    use QuickAnswer\Module\Application\src\Validator\SalaValidator;
+    use Application\Entity\SalaEntity as Sala;
 
-    class SalaServiceTest extends ModelTestCase
+    /**
+     * Class SalaServiceTest
+     * @package Application\test\Service
+     */
+class SalaServiceTest extends \ApplicationTest\Entity\SalaTest
+{
+
+    /**
+     * @var array
+     */
+    private $validData;
+
+    /**
+     * @var array
+     */
+    private $invalidData;
+
+    /**
+     *
+     */
+    public function setUp()
     {
-        public function testCadastrar ()
-        {
-            $salaService = $this->getService('SalaService');
-            $salaService->setServiceManager($this->getServiceManager());
-            $dados['nomeSala'] = 'Sala do Cezinha';
-            $dados['dataCriacao'] = '10/08/1945';
-            $dados['tipo'] = 'Privada';
-            $dados['usuario'] = 1;
-            $dados['perguntas'] = 1;
+        parent::setUp();
+        $this->validData = [
+           'nomeSala' => 'Sala do Cezinha',
+            'dataCriacao'=> '10/08/1945',
+            'tipo' =>'Privada',
+            'usuario' => 1,
+            'perguntas'=> 1
+        ];
 
-            $salaService->cadastrar($dados);
+        $this->invalidData =[
+            'nomeSala' => ' ',
+            'dataCriacao'=> 'dez de agosto',
+            'tipo' => 1,
+            'usuario' => 'marcos',
+            'perguntas'=> 'jean'
+        ];
 
-            $dados = $this->getEntityManager()
-                ->getRepository('QuickAnswer\Module\Application\src\Entity\SalaEntity')->findAll();
-            $this->assertCount(1, $dados);
-            $sala = $dados[0]->nomeSala;
-            $this->assertEquals('Sala do Cezinha', $sala);
-
-            //CONTINUAR
-        }
-
-        public function testListar ()
-        {
-
-        }
-
-        public function testEditar ()
-        {
-
-        }
-
-        public function testExcluir ()
-        {
-
-        }
+        $sala = new Sala();
+        $sala->nomeSala = $this->validData['nomeSala'];
+        $sala->dataCriacao = $this->validData['dataCriacao'];
+        $sala->tipo = $this->validData['tipo'];
+        $sala->usuario = $this->validData['usuario'];
+        $sala->perguntas = $this->validData['perguntas'];
+        $entityManager = $this->getApplicationServiceLocator()
+            ->get('Doctrine\ORM\EntityManager');
+        $entityManager->persist($sala);
+        $entityManager->flush();
     }
-?>
+
+    /**
+     *
+     */
+    public function testListar()
+    {
+    }
+
+    /**
+     *
+     */
+    public function testEditar()
+    {
+    }
+
+    /**
+     *
+     */
+    public function testExcluir()
+    {
+    }
+
+}

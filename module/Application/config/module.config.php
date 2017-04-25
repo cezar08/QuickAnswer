@@ -7,6 +7,7 @@
 
 namespace Application;
 
+use Service\SalaService;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -34,11 +35,23 @@ return [
                     ],
                 ],
             ],
+            'sala' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/sala[/:action]',
+                    'defaults' => [
+                        'controller' => Controller\SalaController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
+            Controller\SalaController::class => InvokableFactory::class,
+
         ],
     ],
     'doctrine' => [
@@ -57,6 +70,19 @@ return [
                     'Application\Entity' => 'driver'
                 ]
             ]
+        ]
+    ],
+    'service_manager' => [
+        'factories' => [
+            'AuthService' => function ($sm) {
+                $entityManager = $sm->get('Doctrine\ORM\EntityManager');
+                return new AuthService($entityManager);
+            },
+            'SalaService' => function ($sm) {
+                $entityManager = $sm->get('Doctrine\ORM\EntityManager');
+
+                return new SalaService($entityManager);
+            }
         ]
     ],
     'view_manager' => [

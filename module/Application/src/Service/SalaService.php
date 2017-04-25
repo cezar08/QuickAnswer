@@ -6,9 +6,17 @@ namespace Service;
 
 use Application\Entity\SalaEntity;
 use Application\Validator\SalaValidator;
+use Doctrine\ORM\EntityManager;
 
-class PerfilService extends Service
+class SalaService
 {
+
+    protected $entityManager;
+
+    public function __construct(EntityManager $em)
+    {
+        $this->entityManager = $em;
+    }
 
     /**
      * Pega os valores já validados e faz a busca
@@ -81,7 +89,7 @@ class PerfilService extends Service
     {
         $sala = $dados['sala'];
 
-        $select = $this->getEntityManager()->createQueryBuilder()
+        $select = $this->entityManager->createQueryBuilder()
                         ->select('Sala')
                         ->from('Entity\Sala', 'Sala')
                         ->where('Sala.nomeSala = :SalaBusca')
@@ -99,7 +107,7 @@ class PerfilService extends Service
      */
     private function buscaSalaObjeto($id)
     {
-        $sala = $this->getEntityManager()
+        $sala = $this->entityManager
             ->find('QuickAnswer\Module\Application\Entity\SalaEntity', $id);
 
         return $sala;
@@ -133,9 +141,9 @@ class PerfilService extends Service
         try {
             $sala->setData($dados);
 
-            $this->getEntityManager()
+            $this->entityManager
                 ->persist($sala);
-            $this->getEntityManager()->flush();
+            $this->entityManager->flush();
         } catch (\Exception $e) {
             return ['error' => 'Erro ao salvar: '.$e->getMEssage()];
         }
@@ -172,8 +180,8 @@ class PerfilService extends Service
         $sala->usuario = $dados['usuario'];
         $sala->perguntas = $dados['perguntas'];
 
-        $this->getEntityManager()->persistir($sala);
-        $this->getEntityManager()->flush();
+        $this->entityManager->persistir($sala);
+        $this->entityManager->flush();
     }
 
     /**
@@ -186,8 +194,8 @@ class PerfilService extends Service
     public function excluir($id)
     {
         $sala = $this->buscaSalaObjeto($id);
-        $this->getEntityManager()->remove($sala);
-        $this->getEntityManager()->flush();
+        $this->entityManager->remove($sala);
+        $this->entityManager->flush();
 
         return true;
     }
