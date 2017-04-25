@@ -27,7 +27,6 @@ class UserValidatorTest extends TestCase
             'password' => 'Xret34Piy',
             'email' => 'joao@gmail.com',
             'picture' => 'img/pictures/AjcKlsdf.jpg',
-            'birthDate' => '01/01/1990',
             'typeAuth' => 'FACEBOOK',
             'university' => 'Unochapecó'
         ];
@@ -36,7 +35,6 @@ class UserValidatorTest extends TestCase
             'password' => '',
             'email' => 'maria',
             'picture' => '',
-            'birthDate' => '1990/01/01',
             'typeAuth' => 'INSTAGRAM',
             'university' => ''
         ];
@@ -56,9 +54,6 @@ class UserValidatorTest extends TestCase
         $this->assertFalse($validator->isValid());
         $this->assertArrayHasKey('name', $validator->getMessages());
         $this->assertArrayHasKey('isEmpty', $validator->getMessages()['name']);
-        $this->assertArrayHasKey('birthDate', $validator->getMessages());
-        $this->assertArrayHasKey('dateFalseFormat', $validator->getMessages()['birthDate']);
-        $this->assertArrayHasKey('dateInvalidDate', $validator->getMessages()['birthDate']);
         $this->assertArrayHasKey('typeAuth', $validator->getMessages());
         $this->assertArrayHasKey('notInArray', $validator->getMessages()['typeAuth']);
     }
