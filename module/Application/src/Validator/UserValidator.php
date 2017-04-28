@@ -79,23 +79,6 @@ class UserValidator extends InputFilter
         $this->add(
             $factory->createInput(
                 [
-                  'name' => 'birthDate',
-                  'required' => false,
-                  'validators' => [
-                      [
-                         'name' => 'Date',
-                          'options' => [
-                              'format' => 'd/m/Y'
-                          ]
-                      ]
-
-                  ]
-                ]
-            )
-        );
-        $this->add(
-            $factory->createInput(
-                [
                     'name' => 'typeAuth',
                     'required' => true,
                     'validators' => [
