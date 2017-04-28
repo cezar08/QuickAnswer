@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace Zend\Mvc;
 
 interface SalaInterface
@@ -8,6 +8,4 @@ interface SalaInterface
 
     // Método para definir se a sala é privada ou pública
     public function definePerfilSala();
-
 }
-

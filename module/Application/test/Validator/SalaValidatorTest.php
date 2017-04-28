@@ -6,13 +6,13 @@
  * Time: 00:44
  */
 
-namespace Application\src\Validator;
+namespace Application\test\Validator;
 
 use Application\Entity\SalaEntity;
 use PHPUnit\Framework\TestCase;
 use Application\src\Validator\SalaValidator;
 
-class SalaValidatorTest extends ModelTestCase
+class SalaValidatorTest extends TestCase
 {
     /**
      * Herança
@@ -42,7 +42,7 @@ class SalaValidatorTest extends ModelTestCase
         $salaValidatorFields = array_key($salaValidatorArrayCopy);
 
         foreach ($salaValidatorFields as $field) {
-            if (!$salaValidator->has($field)) {
+            if (! $salaValidator->has($field)) {
                 $this->fail($field . 'validação não existente! ');
             }
         }
@@ -61,7 +61,7 @@ class SalaValidatorTest extends ModelTestCase
     {
         $salaValidator = new SalaValidator();
         $mensagem = '<a href="www.google.com.br">Sala App</a>';
-        $dados = array('id' => 'nao pode ser string', 'sem_validacao' => $mensagem);
+        $dados = ['id' => 'nao pode ser string', 'sem_validacao' => $mensagem];
         $salaValidator->setData($dados);
         $this->assertTrue($salaValidator->isValid());
         $this->assertEquals(0, $salaValidator->get('id')->getValue());

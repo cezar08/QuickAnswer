@@ -29,18 +29,18 @@ class SalaServiceTest extends \ApplicationTest\Entity\SalaTest
         parent::setUp();
         $this->validData = [
            'nomeSala' => 'Sala do Cezinha',
-            'dataCriacao'=> '10/08/1945',
-            'tipo' =>'Privada',
+            'dataCriacao' => '10/08/1945',
+            'tipo' => 'Privada',
             'usuario' => 1,
-            'perguntas'=> 1
+            'perguntas' => 1
         ];
 
-        $this->invalidData =[
+        $this->invalidData = [
             'nomeSala' => ' ',
-            'dataCriacao'=> 'dez de agosto',
+            'dataCriacao' => 'dez de agosto',
             'tipo' => 1,
             'usuario' => 'marcos',
-            'perguntas'=> 'jean'
+            'perguntas' => 'jean'
         ];
 
         $sala = new Sala();
@@ -75,5 +75,4 @@ class SalaServiceTest extends \ApplicationTest\Entity\SalaTest
     public function testExcluir()
     {
     }
-
 }

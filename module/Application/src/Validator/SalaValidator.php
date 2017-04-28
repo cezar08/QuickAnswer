@@ -1,11 +1,12 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Wesley Sartori
- * Date: 31/03/17
+ * User: wesley
+ * Date: 27/04/17
+ * Time: 23:23
  */
 
-namespace Application\Validator;
+namespace Application\src\Validator;
 
 use Zend\InputFilter\InputFilter;
 use Zend\InputFilter\Factory as InputFactory;
@@ -21,11 +22,11 @@ class SalaValidator extends InputFilter
                     'name' => 'id',
                     'required' => 'false',
                     'filters' =>
-                    [
                         [
-                            'name' => 'Int'
+                            [
+                                'name' => 'Int'
+                            ]
                         ]
-                    ]
                 ]
             )
         );
@@ -41,11 +42,11 @@ class SalaValidator extends InputFilter
                     ],
                     'validator' => [
                         [
-                        'name' => 'StringLength',
-                        'options' => [
-                            'encoding' => 'UTF-8',
-                            'min' => 3,
-                            'max' => 60
+                            'name' => 'StringLength',
+                            'options' => [
+                                'encoding' => 'UTF-8',
+                                'min' => 3,
+                                'max' => 60
                             ]
                         ]
                     ],
@@ -73,16 +74,16 @@ class SalaValidator extends InputFilter
         $this->add(
             $factory->createInput(
                 [
-                   'name' => 'tipo',
-                   'required' => true,
-                   'validators' => [
-                       [
-                           'name' => 'InArray',
-                           'options' => [
-                               'haystack' => ['Publica', 'Privada']
-                           ]
-                       ]
-                   ]
+                    'name' => 'tipo',
+                    'required' => true,
+                    'validators' => [
+                        [
+                            'name' => 'InArray',
+                            'options' => [
+                                'haystack' => ['Publica', 'Privada']
+                            ]
+                        ]
+                    ]
                 ]
             )
         );
