@@ -26,8 +26,8 @@ class UserInviteEntity extends Entity implements UserInviteEntityInterface
     /**
      * @ORM\Id
      * @ORM\Column(type= "integer")
-     * @ManyToOne(targetEntity="UserEntity")
-     * @JoinColumn(name="id_user", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="UserEntity")
+     * @ORM\JoinColumn(name="user", referencedColumnName="id")
      *
      * @var int
      */
@@ -36,8 +36,8 @@ class UserInviteEntity extends Entity implements UserInviteEntityInterface
     /**
      * @ORM\Id
      * @ORM\Column(type= "integer")
-     * @ManyToOne(targetEntity="SalaEntity")
-     * @JoinColumn(name="id_room", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="SalaEntity")
+     * @ORM\JoinColumn(name="room", referencedColumnName="id")
      *
      * @var int
      */
