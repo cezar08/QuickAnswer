@@ -24,7 +24,6 @@ class UserInviteEntity extends Entity implements UserInviteEntityInterface
     protected $id;
 
     /**
-     * @ORM\Id
      * @ORM\Column(type= "integer")
      * @ORM\ManyToOne(targetEntity="UserEntity")
      * @ORM\JoinColumn(name="user", referencedColumnName="id")
@@ -34,7 +33,6 @@ class UserInviteEntity extends Entity implements UserInviteEntityInterface
     protected $user;
 
     /**
-     * @ORM\Id
      * @ORM\Column(type= "integer")
      * @ORM\ManyToOne(targetEntity="SalaEntity")
      * @ORM\JoinColumn(name="room", referencedColumnName="id")
@@ -44,7 +42,6 @@ class UserInviteEntity extends Entity implements UserInviteEntityInterface
     protected $room;
 
     /**
-     * @ORM\Boolean
      * @ORM\Column(type= "boolean", nullable=false)
      *
      * @var boolean
