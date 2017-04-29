@@ -10,7 +10,7 @@ return [
                     'port' => '5432',
                     'user' => 'postgres',
                     'password' => 'root',
-                    'dbname' => 'db_qa'
+                    'dbname' => 'db_qa_test'
                 ]
             ],
         ]
