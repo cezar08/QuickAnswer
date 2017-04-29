@@ -8,9 +8,9 @@
 
 namespace Application\test\Validator;
 
-use Application\Entity\SalaEntity;
 use PHPUnit\Framework\TestCase;
-use Application\src\Validator\SalaValidator;
+use Application\Entity\SalaEntity;
+use Application\Validator\SalaValidator;
 
 class SalaValidatorTest extends TestCase
 {
@@ -36,7 +36,6 @@ class SalaValidatorTest extends TestCase
      */
     public function testFields()
     {
-        //$salaEntity = new SalaEntity();
         $salaValidator = new SalaValidator();
         $salaValidatorArrayCopy = $salaValidator->getArrayCopy();
         $salaValidatorFields = array_key($salaValidatorArrayCopy);

@@ -197,7 +197,7 @@ class FormElementManagerV3Polyfill extends AbstractPluginManager
     protected $shareByDefault = false;
 
     /**
-     * Interfaces all plugins managed by this class must implement.
+     * Interface all plugins managed by this class must implement.
      * @var string
      */
     protected $instanceOf = ElementInterface::class;
