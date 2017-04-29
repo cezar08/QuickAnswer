@@ -11,3 +11,4 @@ class Midia extends Entity implements MidiaInterface
     protected $_path;
     protected $_typeofmidia;
 }
+
