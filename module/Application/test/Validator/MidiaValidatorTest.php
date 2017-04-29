@@ -23,16 +23,16 @@ class MidiaValidatorTest extends TestCase
         parent::setUp();
         $this->dataProvider = [
             'id' => null,
-            'typeofmidia' => 'foto',
+            'typeofmidia' => 1,
             'description' => 'fotoTeste',
-            'dateMidia' => '2017/04/17',
+            'dateMidia' => '17/04/2017',
             'path' => 'img/pictures/teste.jpg'
         ];
         $this->invalidDataProvider = [
-            'typeofmidia' => '',
+            'typeofmidia' => null,
             'description' => '',
-            'dateMidia' => '',
-            'path' => ''
+            'dateMidia' => '2017/04/17',
+            'path' => null
 
         ];
     }

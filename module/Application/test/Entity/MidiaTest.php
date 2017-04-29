@@ -16,7 +16,7 @@ use Application\Entity\MidiaEntity as Midia;
 /**
  * Class MidiaTest
  * @package ApplicationTest\Entity
- * @group Entities
+ * @group Entity
  */
 class MidiaTest extends TestCase
 {

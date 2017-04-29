@@ -1,14 +1,13 @@
 <?php
 
 namespace Application\Entity;
-use Application\Interfaces\MidiaInterface;
+use Application\Interfaces\MidiaEntityInterface;
 
-class Midia extends Entity implements MidiaInterface
+class MidiaEntity extends Entity implements MidiaEntityInterface
 {
-    protected $_id;
-    protected $_description;
-    protected $_dateMidia;
-    protected $_path;
-    protected $_typeofmidia;
+    protected $id;
+    protected $typeofmidia;
+    protected $description;
+    protected $dateMidia;
+    protected $path;
 }
-
