@@ -2,7 +2,7 @@
     namespace Application\test\Service;
 
     use Application\Entity\SalaEntity as Sala;
-    use Application\Service\SalaService;
+    use Application\SalaService;
     use Zend\Stdlib\ArrayUtils;
 
     /**
@@ -46,7 +46,7 @@ class SalaServiceTest extends \ApplicationTest\Service\AbstractServiceTestCase
 
         $sala = new Sala();
         $sala->nomeSala = $this->validData['nomeSala'];
-        $sala->dataCriacao = $this->validData['dataCriacao'];
+        $sala->dataCriacao = new \DateTime ['now'];
         $sala->tipo = $this->validData['tipo'];
         $sala->usuario = $this->validData['usuario'];
         $sala->perguntas = $this->validData['perguntas'];

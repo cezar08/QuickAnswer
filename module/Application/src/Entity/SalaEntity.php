@@ -61,8 +61,4 @@ class SalaEntity extends Entity
      */
     protected $perguntas;
 
-    public function getArrayCopy()
-    {
-        return get_object_vars($this);
-    }
 }

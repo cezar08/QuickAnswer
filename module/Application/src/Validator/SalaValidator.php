@@ -37,12 +37,12 @@ class SalaValidator extends InputFilter
                     'name' => 'nomeSala',
                     'required' => true,
                     'filters' => [
-                        ['name' => 'StringTags'],
+                        ['name' => 'StripTags'],
                         ['name' => 'StringTrim']
                     ],
                     'validator' => [
                         [
-                            'name' => 'StringLength',
+                            'name' => 'StripLength',
                             'options' => [
                                 'encoding' => 'UTF-8',
                                 'min' => 3,
@@ -61,7 +61,7 @@ class SalaValidator extends InputFilter
                     'required' => false,
                     'validators' => [
                         [
-                            'name' => 'dataCriacao',
+                            'name' => 'Date',
                             'options' => [
                                 'format' => 'd/m/Y'
                             ]
@@ -94,7 +94,7 @@ class SalaValidator extends InputFilter
                     'name' => 'usuario',
                     'required' => true,
                     'filters' => [
-                        ['name' => 'StringTags'],
+                        ['name' => 'StripTags'],
                         ['name' => 'StringTrim']
                     ],
                     'validator' => [
