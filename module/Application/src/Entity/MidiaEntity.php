@@ -5,14 +5,14 @@ use Application\Interfaces\MidiaEntityInterface;
 
 class MidiaEntity extends Entity implements MidiaEntityInterface
 {
-    protected $id;
+    protected $_id;
 
-    protected $typeofmidia;
+    protected $_typeofmidia;
 
-    protected $description;
+    protected $_description;
 
-    protected $dateMidia;
+    protected $_dateMidia;
 
-    protected $path;
+    protected $_path;
 
 }
