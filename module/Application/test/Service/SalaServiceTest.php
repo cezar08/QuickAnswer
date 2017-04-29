@@ -1,14 +1,15 @@
 <?php
     namespace Application\test\Service;
 
-    use PHPUnit\Framework\TestCase;
     use Application\Entity\SalaEntity as Sala;
+    use Application\Service\SalaService;
+    use Zend\Stdlib\ArrayUtils;
 
     /**
      * Class SalaServiceTest
      * @package Application\test\Service
      */
-class SalaServiceTest extends \ApplicationTest\Entity\SalaTest
+class SalaServiceTest extends \ApplicationTest\Service\AbstractServiceTestCase
 {
 
     /**
@@ -49,10 +50,10 @@ class SalaServiceTest extends \ApplicationTest\Entity\SalaTest
         $sala->tipo = $this->validData['tipo'];
         $sala->usuario = $this->validData['usuario'];
         $sala->perguntas = $this->validData['perguntas'];
-        $entityManager = $this->getApplicationServiceLocator()
+        $em = $this->getApplicationServiceLocator()
             ->get('Doctrine\ORM\EntityManager');
-        $entityManager->persist($sala);
-        $entityManager->flush();
+        $em->persist($sala);
+        $em->flush();
     }
 
     /**

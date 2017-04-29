@@ -11,7 +11,7 @@
 namespace SebastianBergmann\CodeCoverage\Driver;
 
 /**
- * Interfaces for code coverage drivers.
+ * Interface for code coverage drivers.
  */
 interface Driver
 {

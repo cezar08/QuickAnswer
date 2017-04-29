@@ -6,7 +6,7 @@
  * Time: 23:23
  */
 
-namespace Application\src\Validator;
+namespace Application\Validator;
 
 use Zend\InputFilter\InputFilter;
 use Zend\InputFilter\Factory as InputFactory;

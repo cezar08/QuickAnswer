@@ -10,7 +10,7 @@
 namespace Zend\View\Model;
 
 /**
- * Interfaces describing methods for clearing the state of a view model.
+ * Interface describing methods for clearing the state of a view model.
  *
  * View models implementing this interface allow clearing children, options,
  * and variables.
