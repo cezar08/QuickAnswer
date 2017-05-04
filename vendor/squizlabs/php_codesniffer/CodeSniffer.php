@@ -37,7 +37,7 @@ if (class_exists('PHP_CodeSniffer_CLI', true) === false) {
 }
 
 if (interface_exists('PHP_CodeSniffer_Sniff', true) === false) {
-    throw new PHP_CodeSniffer_Exception('Interfaces PHP_CodeSniffer_Sniff not found');
+    throw new PHP_CodeSniffer_Exception('Interface PHP_CodeSniffer_Sniff not found');
 }
 
 /**
@@ -73,7 +73,7 @@ class PHP_CodeSniffer
      *
      * @var string
      */
-    const VERSION = '2.8.1';
+    const VERSION = '2.9.0';
 
     /**
      * Package stability; either stable, beta or alpha.
@@ -1801,7 +1801,7 @@ class PHP_CodeSniffer
                 $this
             );
 
-            $phpcsFile->addError($error, null);
+            $phpcsFile->addError($error, null, 'Internal.Exception');
         }//end try
 
         $cliValues = $this->cli->getCommandLineValues();

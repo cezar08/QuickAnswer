@@ -627,73 +627,6 @@
         ]
     },
     {
-        "name": "zendframework/zend-mvc",
-        "version": "3.0.4",
-        "version_normalized": "3.0.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/zendframework/zend-mvc.git",
-            "reference": "e25f04a71b70985620f5ff3e762475848d049025"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/zendframework/zend-mvc/zipball/e25f04a71b70985620f5ff3e762475848d049025",
-            "reference": "e25f04a71b70985620f5ff3e762475848d049025",
-            "shasum": ""
-        },
-        "require": {
-            "container-interop/container-interop": "^1.1",
-            "php": "^5.6 || ^7.0",
-            "zendframework/zend-eventmanager": "^3.0",
-            "zendframework/zend-http": "^2.5.4",
-            "zendframework/zend-modulemanager": "^2.7.1",
-            "zendframework/zend-router": "^3.0.1",
-            "zendframework/zend-servicemanager": "^3.0.3",
-            "zendframework/zend-stdlib": "^3.0",
-            "zendframework/zend-view": "^2.6.7"
-        },
-        "require-dev": {
-            "fabpot/php-cs-fixer": "1.7.*",
-            "phpunit/phpunit": "^4.5",
-            "zendframework/zend-json": "^2.6.1 || ^3.0",
-            "zendframework/zend-psr7bridge": "^0.2"
-        },
-        "suggest": {
-            "zendframework/zend-json": "(^2.6.1 || ^3.0) To auto-deserialize JSON body content in AbstractRestfulController extensions, when json_decode is unavailable",
-            "zendframework/zend-mvc-console": "zend-mvc-console provides the ability to expose zend-mvc as a console application",
-            "zendframework/zend-mvc-i18n": "zend-mvc-i18n provides integration with zend-i18n, including a translation bridge and translatable route segments",
-            "zendframework/zend-mvc-plugin-fileprg": "To provide Post/Redirect/Get functionality around forms that container file uploads",
-            "zendframework/zend-mvc-plugin-flashmessenger": "To provide flash messaging capabilities between requests",
-            "zendframework/zend-mvc-plugin-identity": "To access the authenticated identity (per zend-authentication) in controllers",
-            "zendframework/zend-mvc-plugin-prg": "To provide Post/Redirect/Get functionality within controllers",
-            "zendframework/zend-psr7bridge": "(^0.2) To consume PSR-7 middleware within the MVC workflow",
-            "zendframework/zend-servicemanager-di": "zend-servicemanager-di provides utilities for integrating zend-di and zend-servicemanager in your zend-mvc application"
-        },
-        "time": "2016-12-20 15:33:49",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.0-dev",
-                "dev-develop": "3.1-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Zend\\Mvc\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "homepage": "https://github.com/zendframework/zend-mvc",
-        "keywords": [
-            "mvc",
-            "zf2"
-        ]
-    },
-    {
         "name": "zfcampus/zf-development-mode",
         "version": "3.1.0",
         "version_normalized": "3.1.0.0",
@@ -1959,155 +1892,6 @@
         ]
     },
     {
-        "name": "zendframework/zend-test",
-        "version": "3.0.2",
-        "version_normalized": "3.0.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/zendframework/zend-test.git",
-            "reference": "f1ee9ae3f69446f19f4015826b7a70d5ff2f5644"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/zendframework/zend-test/zipball/f1ee9ae3f69446f19f4015826b7a70d5ff2f5644",
-            "reference": "f1ee9ae3f69446f19f4015826b7a70d5ff2f5644",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^5.6 || ^7.0",
-            "phpunit/phpunit": "^4.0 || ^5.0",
-            "sebastian/version": "^1.0.4 || ^2.0",
-            "zendframework/zend-console": "^2.6",
-            "zendframework/zend-dom": "^2.6",
-            "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
-            "zendframework/zend-http": "^2.5.4",
-            "zendframework/zend-mvc": "^3.0",
-            "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
-            "zendframework/zend-stdlib": "^2.7 || ^3.0",
-            "zendframework/zend-uri": "^2.5",
-            "zendframework/zend-view": "^2.6.3"
-        },
-        "require-dev": {
-            "fabpot/php-cs-fixer": "1.7.*",
-            "mikey179/vfsstream": "~1.2",
-            "symfony/finder": "^2.2",
-            "zendframework/zend-i18n": "^2.6",
-            "zendframework/zend-log": "^2.7.1",
-            "zendframework/zend-modulemanager": "^2.7.1",
-            "zendframework/zend-mvc-console": "^1.1.8",
-            "zendframework/zend-mvc-plugin-flashmessenger": "^0.1.0",
-            "zendframework/zend-serializer": "^2.6.1",
-            "zendframework/zend-session": "^2.6.2",
-            "zendframework/zend-validator": "^2.8"
-        },
-        "suggest": {
-            "zendframework/zend-mvc-console": "^1.1.8, to test MVC <-> console integration"
-        },
-        "time": "2016-09-06 16:36:24",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.0-dev",
-                "dev-develop": "3.1-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Zend\\Test\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "homepage": "https://github.com/zendframework/zend-test",
-        "keywords": [
-            "test",
-            "zf2"
-        ]
-    },
-    {
-        "name": "squizlabs/php_codesniffer",
-        "version": "2.8.1",
-        "version_normalized": "2.8.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-            "reference": "d7cf0d894e8aa4c73712ee4a331cc1eaa37cdc7d"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/d7cf0d894e8aa4c73712ee4a331cc1eaa37cdc7d",
-            "reference": "d7cf0d894e8aa4c73712ee4a331cc1eaa37cdc7d",
-            "shasum": ""
-        },
-        "require": {
-            "ext-simplexml": "*",
-            "ext-tokenizer": "*",
-            "ext-xmlwriter": "*",
-            "php": ">=5.1.2"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "~4.0"
-        },
-        "time": "2017-03-01 22:17:45",
-        "bin": [
-            "scripts/phpcs",
-            "scripts/phpcbf"
-        ],
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "CodeSniffer.php",
-                "CodeSniffer/CLI.php",
-                "CodeSniffer/Exception.php",
-                "CodeSniffer/File.php",
-                "CodeSniffer/Fixer.php",
-                "CodeSniffer/Report.php",
-                "CodeSniffer/Reporting.php",
-                "CodeSniffer/Sniff.php",
-                "CodeSniffer/Tokens.php",
-                "CodeSniffer/Reports/",
-                "CodeSniffer/Tokenizers/",
-                "CodeSniffer/DocGenerators/",
-                "CodeSniffer/Standards/AbstractPatternSniff.php",
-                "CodeSniffer/Standards/AbstractScopeSniff.php",
-                "CodeSniffer/Standards/AbstractVariableSniff.php",
-                "CodeSniffer/Standards/IncorrectPatternException.php",
-                "CodeSniffer/Standards/Generic/Sniffs/",
-                "CodeSniffer/Standards/MySource/Sniffs/",
-                "CodeSniffer/Standards/PEAR/Sniffs/",
-                "CodeSniffer/Standards/PSR1/Sniffs/",
-                "CodeSniffer/Standards/PSR2/Sniffs/",
-                "CodeSniffer/Standards/Squiz/Sniffs/",
-                "CodeSniffer/Standards/Zend/Sniffs/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Greg Sherwood",
-                "role": "lead"
-            }
-        ],
-        "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
-        "homepage": "http://www.squizlabs.com/php-codesniffer",
-        "keywords": [
-            "phpcs",
-            "standards"
-        ]
-    },
-    {
         "name": "zendframework/zend-hydrator",
         "version": "2.2.1",
         "version_normalized": "2.2.1.0",
@@ -2221,65 +2005,6 @@
         ]
     },
     {
-        "name": "symfony/debug",
-        "version": "v3.2.7",
-        "version_normalized": "3.2.7.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/debug.git",
-            "reference": "56f613406446a4a0a031475cfd0a01751de22659"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/debug/zipball/56f613406446a4a0a031475cfd0a01751de22659",
-            "reference": "56f613406446a4a0a031475cfd0a01751de22659",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.5.9",
-            "psr/log": "~1.0"
-        },
-        "conflict": {
-            "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
-        },
-        "require-dev": {
-            "symfony/class-loader": "~2.8|~3.0",
-            "symfony/http-kernel": "~2.8|~3.0"
-        },
-        "time": "2017-03-28 21:38:24",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.2-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\Debug\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Debug Component",
-        "homepage": "https://symfony.com"
-    },
-    {
         "name": "symfony/polyfill-mbstring",
         "version": "v1.3.0",
         "version_normalized": "1.3.0.0",
@@ -2339,71 +2064,6 @@
             "portable",
             "shim"
         ]
-    },
-    {
-        "name": "symfony/console",
-        "version": "v3.2.7",
-        "version_normalized": "3.2.7.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/console.git",
-            "reference": "c30243cc51f726812be3551316b109a2f5deaf8d"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/console/zipball/c30243cc51f726812be3551316b109a2f5deaf8d",
-            "reference": "c30243cc51f726812be3551316b109a2f5deaf8d",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.5.9",
-            "symfony/debug": "~2.8|~3.0",
-            "symfony/polyfill-mbstring": "~1.0"
-        },
-        "require-dev": {
-            "psr/log": "~1.0",
-            "symfony/event-dispatcher": "~2.8|~3.0",
-            "symfony/filesystem": "~2.8|~3.0",
-            "symfony/process": "~2.8|~3.0"
-        },
-        "suggest": {
-            "psr/log": "For using the console logger",
-            "symfony/event-dispatcher": "",
-            "symfony/filesystem": "",
-            "symfony/process": ""
-        },
-        "time": "2017-04-04 14:33:42",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.2-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\Console\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Console Component",
-        "homepage": "https://symfony.com"
     },
     {
         "name": "doctrine/cache",
@@ -3607,63 +3267,6 @@
         ]
     },
     {
-        "name": "symfony/yaml",
-        "version": "v3.2.7",
-        "version_normalized": "3.2.7.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/yaml.git",
-            "reference": "62b4cdb99d52cb1ff253c465eb1532a80cebb621"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/yaml/zipball/62b4cdb99d52cb1ff253c465eb1532a80cebb621",
-            "reference": "62b4cdb99d52cb1ff253c465eb1532a80cebb621",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.5.9"
-        },
-        "require-dev": {
-            "symfony/console": "~2.8|~3.0"
-        },
-        "suggest": {
-            "symfony/console": "For validating YAML files using the lint command"
-        },
-        "time": "2017-03-20 09:45:15",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.2-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\Yaml\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Yaml Component",
-        "homepage": "https://symfony.com"
-    },
-    {
         "name": "phpunit/php-code-coverage",
         "version": "4.0.8",
         "version_normalized": "4.0.8.0",
@@ -4007,5 +3610,406 @@
             "form",
             "zf2"
         ]
+    },
+    {
+        "name": "squizlabs/php_codesniffer",
+        "version": "2.9.0",
+        "version_normalized": "2.9.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+            "reference": "f7dfecbee89d68ab475a6c9e17d22bc9b69aed97"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/f7dfecbee89d68ab475a6c9e17d22bc9b69aed97",
+            "reference": "f7dfecbee89d68ab475a6c9e17d22bc9b69aed97",
+            "shasum": ""
+        },
+        "require": {
+            "ext-simplexml": "*",
+            "ext-tokenizer": "*",
+            "ext-xmlwriter": "*",
+            "php": ">=5.1.2"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2017-05-03 23:30:39",
+        "bin": [
+            "scripts/phpcs",
+            "scripts/phpcbf"
+        ],
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "CodeSniffer.php",
+                "CodeSniffer/CLI.php",
+                "CodeSniffer/Exception.php",
+                "CodeSniffer/File.php",
+                "CodeSniffer/Fixer.php",
+                "CodeSniffer/Report.php",
+                "CodeSniffer/Reporting.php",
+                "CodeSniffer/Sniff.php",
+                "CodeSniffer/Tokens.php",
+                "CodeSniffer/Reports/",
+                "CodeSniffer/Tokenizers/",
+                "CodeSniffer/DocGenerators/",
+                "CodeSniffer/Standards/AbstractPatternSniff.php",
+                "CodeSniffer/Standards/AbstractScopeSniff.php",
+                "CodeSniffer/Standards/AbstractVariableSniff.php",
+                "CodeSniffer/Standards/IncorrectPatternException.php",
+                "CodeSniffer/Standards/Generic/Sniffs/",
+                "CodeSniffer/Standards/MySource/Sniffs/",
+                "CodeSniffer/Standards/PEAR/Sniffs/",
+                "CodeSniffer/Standards/PSR1/Sniffs/",
+                "CodeSniffer/Standards/PSR2/Sniffs/",
+                "CodeSniffer/Standards/Squiz/Sniffs/",
+                "CodeSniffer/Standards/Zend/Sniffs/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Greg Sherwood",
+                "role": "lead"
+            }
+        ],
+        "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+        "homepage": "http://www.squizlabs.com/php-codesniffer",
+        "keywords": [
+            "phpcs",
+            "standards"
+        ]
+    },
+    {
+        "name": "zendframework/zend-mvc",
+        "version": "3.1.0",
+        "version_normalized": "3.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/zendframework/zend-mvc.git",
+            "reference": "ba40f2c795403ce8b95f9251657cc2b96c40c417"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/zendframework/zend-mvc/zipball/ba40f2c795403ce8b95f9251657cc2b96c40c417",
+            "reference": "ba40f2c795403ce8b95f9251657cc2b96c40c417",
+            "shasum": ""
+        },
+        "require": {
+            "container-interop/container-interop": "^1.1",
+            "php": "^5.6 || ^7.0",
+            "zendframework/zend-eventmanager": "^3.0",
+            "zendframework/zend-http": "^2.5.4",
+            "zendframework/zend-modulemanager": "^2.7.1",
+            "zendframework/zend-router": "^3.0.1",
+            "zendframework/zend-servicemanager": "^3.0.3",
+            "zendframework/zend-stdlib": "^3.0",
+            "zendframework/zend-view": "^2.6.7"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^6.0.7 || ^5.7.14",
+            "zendframework/zend-coding-standard": "~1.0.0",
+            "zendframework/zend-json": "^2.6.1 || ^3.0",
+            "zendframework/zend-psr7bridge": "^0.2",
+            "zendframework/zend-stratigility": "^2.0.1"
+        },
+        "suggest": {
+            "zendframework/zend-json": "(^2.6.1 || ^3.0) To auto-deserialize JSON body content in AbstractRestfulController extensions, when json_decode is unavailable",
+            "zendframework/zend-log": "^2.9.1  To provide log functionality via LogFilterManager, LogFormatterManager, and LogProcessorManager",
+            "zendframework/zend-mvc-console": "zend-mvc-console provides the ability to expose zend-mvc as a console application",
+            "zendframework/zend-mvc-i18n": "zend-mvc-i18n provides integration with zend-i18n, including a translation bridge and translatable route segments",
+            "zendframework/zend-mvc-plugin-fileprg": "To provide Post/Redirect/Get functionality around forms that container file uploads",
+            "zendframework/zend-mvc-plugin-flashmessenger": "To provide flash messaging capabilities between requests",
+            "zendframework/zend-mvc-plugin-identity": "To access the authenticated identity (per zend-authentication) in controllers",
+            "zendframework/zend-mvc-plugin-prg": "To provide Post/Redirect/Get functionality within controllers",
+            "zendframework/zend-paginator": "^2.7 To provide pagination functionality via PaginatorPluginManager",
+            "zendframework/zend-psr7bridge": "(^0.2) To consume PSR-7 middleware within the MVC workflow",
+            "zendframework/zend-servicemanager-di": "zend-servicemanager-di provides utilities for integrating zend-di and zend-servicemanager in your zend-mvc application",
+            "zendframework/zend-stratigility": "zend-stratigility is required to use middleware pipes in the MiddlewareListener"
+        },
+        "time": "2017-05-01 20:21:57",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.1-dev",
+                "dev-develop": "3.2-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Zend\\Mvc\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "homepage": "https://github.com/zendframework/zend-mvc",
+        "keywords": [
+            "mvc",
+            "zf2"
+        ]
+    },
+    {
+        "name": "symfony/yaml",
+        "version": "v3.2.8",
+        "version_normalized": "3.2.8.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/yaml.git",
+            "reference": "acec26fcf7f3031e094e910b94b002fa53d4e4d6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/yaml/zipball/acec26fcf7f3031e094e910b94b002fa53d4e4d6",
+            "reference": "acec26fcf7f3031e094e910b94b002fa53d4e4d6",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.9"
+        },
+        "require-dev": {
+            "symfony/console": "~2.8|~3.0"
+        },
+        "suggest": {
+            "symfony/console": "For validating YAML files using the lint command"
+        },
+        "time": "2017-05-01 14:55:58",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.2-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Yaml\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Yaml Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "zendframework/zend-test",
+        "version": "3.1.0",
+        "version_normalized": "3.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/zendframework/zend-test.git",
+            "reference": "9665205827ed6ee69f1ef82990362057c789250c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/zendframework/zend-test/zipball/9665205827ed6ee69f1ef82990362057c789250c",
+            "reference": "9665205827ed6ee69f1ef82990362057c789250c",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.6 || ^7.0",
+            "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0",
+            "sebastian/version": "^1.0.4 || ^2.0",
+            "zendframework/zend-console": "^2.6",
+            "zendframework/zend-dom": "^2.6",
+            "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
+            "zendframework/zend-http": "^2.5.4",
+            "zendframework/zend-mvc": "^3.0",
+            "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
+            "zendframework/zend-stdlib": "^2.7 || ^3.0",
+            "zendframework/zend-uri": "^2.5",
+            "zendframework/zend-view": "^2.6.3"
+        },
+        "require-dev": {
+            "mikey179/vfsstream": "~1.2",
+            "symfony/finder": "^2.2",
+            "zendframework/zend-coding-standard": "~1.0.0",
+            "zendframework/zend-i18n": "^2.6",
+            "zendframework/zend-log": "^2.7.1",
+            "zendframework/zend-modulemanager": "^2.7.1",
+            "zendframework/zend-mvc-console": "^1.1.8",
+            "zendframework/zend-mvc-plugin-flashmessenger": "^0.1.0",
+            "zendframework/zend-serializer": "^2.6.1",
+            "zendframework/zend-session": "^2.6.2",
+            "zendframework/zend-validator": "^2.8"
+        },
+        "suggest": {
+            "zendframework/zend-mvc-console": "^1.1.8, to test MVC <-> console integration"
+        },
+        "time": "2017-05-01 19:54:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.1-dev",
+                "dev-develop": "3.2-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Zend\\Test\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "homepage": "https://github.com/zendframework/zend-test",
+        "keywords": [
+            "test",
+            "zf2"
+        ]
+    },
+    {
+        "name": "symfony/debug",
+        "version": "v3.2.8",
+        "version_normalized": "3.2.8.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/debug.git",
+            "reference": "fd6eeee656a5a7b384d56f1072243fe1c0e81686"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/debug/zipball/fd6eeee656a5a7b384d56f1072243fe1c0e81686",
+            "reference": "fd6eeee656a5a7b384d56f1072243fe1c0e81686",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.9",
+            "psr/log": "~1.0"
+        },
+        "conflict": {
+            "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
+        },
+        "require-dev": {
+            "symfony/class-loader": "~2.8|~3.0",
+            "symfony/http-kernel": "~2.8|~3.0"
+        },
+        "time": "2017-04-19 20:17:50",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.2-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Debug\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Debug Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "symfony/console",
+        "version": "v3.2.8",
+        "version_normalized": "3.2.8.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/console.git",
+            "reference": "a7a17e0c6c3c4d70a211f80782e4b90ddadeaa38"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/console/zipball/a7a17e0c6c3c4d70a211f80782e4b90ddadeaa38",
+            "reference": "a7a17e0c6c3c4d70a211f80782e4b90ddadeaa38",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.9",
+            "symfony/debug": "~2.8|~3.0",
+            "symfony/polyfill-mbstring": "~1.0"
+        },
+        "require-dev": {
+            "psr/log": "~1.0",
+            "symfony/event-dispatcher": "~2.8|~3.0",
+            "symfony/filesystem": "~2.8|~3.0",
+            "symfony/process": "~2.8|~3.0"
+        },
+        "suggest": {
+            "psr/log": "For using the console logger",
+            "symfony/event-dispatcher": "",
+            "symfony/filesystem": "",
+            "symfony/process": ""
+        },
+        "time": "2017-04-26 01:39:17",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.2-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Console\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Console Component",
+        "homepage": "https://symfony.com"
     }
 ]
