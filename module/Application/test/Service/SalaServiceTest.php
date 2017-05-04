@@ -46,7 +46,7 @@ class SalaServiceTest extends \ApplicationTest\Service\AbstractServiceTestCase
 
         $sala = new Sala();
         $sala->nomeSala = $this->validData['nomeSala'];
-        $sala->dataCriacao = new \DateTime ['now'];
+        $sala->dataCriacao = new \DateTime;
         $sala->tipo = $this->validData['tipo'];
         $sala->usuario = $this->validData['usuario'];
         $sala->perguntas = $this->validData['perguntas'];
@@ -68,6 +68,9 @@ class SalaServiceTest extends \ApplicationTest\Service\AbstractServiceTestCase
      */
     public function testEditar()
     {
+        $salaService = $this->getService('SalaService');
+        $salaService->setServiceManager($this->getServiceManager());
+        $this->addSalaService();
     }
 
     /**
@@ -75,5 +78,19 @@ class SalaServiceTest extends \ApplicationTest\Service\AbstractServiceTestCase
      */
     public function testExcluir()
     {
+        $salaService = $this->getService('SalaService');
+        $salaService->setServiceManager($this->getServiceManager());
+        $this->addSalaService();
+        $dados['id'] = 1;
+        $dados['nomeSala'] = 'SalaTeste';
+        $dados['dataCriacao'] = '10/08/2016';
+        $dados['tipo'] = ['Privado'];
+        $dados['usuario'] = ['Jean'];
+        $dados['perguntas'] = ['Testando A pergunta'];
+        $salaService->cadastrar($dados);
+        $dados['id'] = 1;
+        $salaService->excluir($dados['id']);
+        $retorno = $salaService->listar();
+        $this->assertCount(0, $retorno);
     }
 }
