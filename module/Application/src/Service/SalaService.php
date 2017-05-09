@@ -161,7 +161,7 @@ class SalaService
     {
         $sala = $this->buscaSalaObjeto($id);
         $validator = $this->validacao($dados);
-        $this->dadosAtualizar($sala, $validator->getValues());
+        $this->dadosParaEditar($sala, $validator->getValues());
     }
 
     /**
