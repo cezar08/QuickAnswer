@@ -62,7 +62,7 @@ class SalaServiceTest extends \ApplicationTest\Service\AbstractServiceTestCase
     {
         $room_service = $this->getService('RoomService');
         $room_service->setServiceManager($this->getServiceManager());
-        $data ['nomeSala'] = 'Sala 101';
+        $data['nomeSala'] = 'Sala 101';
         $data['dataCriacao'] = '08/08/1998';
         $data['tipo'] = 'Publica';
         $data['usuario'] = 1;
@@ -90,7 +90,7 @@ class SalaServiceTest extends \ApplicationTest\Service\AbstractServiceTestCase
     {
         $room_service = $this->getService('RoomService');
         $room_service->setServiceManager($this->getServiceManager());
-        $data ['nomeSala'] = 'Sala 101';
+        $data['nomeSala'] = 'Sala 101';
         $data['dataCriacao'] = '08/08/1998';
         $data['tipo'] = 'Publica';
         $data['usuario'] = 1;
@@ -119,6 +119,24 @@ class SalaServiceTest extends \ApplicationTest\Service\AbstractServiceTestCase
      */
     public function testEditar()
     {
+        $room_service = $this->getService('RoomService');
+        $room_service->setServiceManager($this->getServiceManager());
+        $data['nomeSala'] = 'Sala 101';
+        $data['dataCriacao'] = '08/08/1998';
+        $data['tipo'] = 'Publica';
+        $data['usuario'] = 1;
+        $data['perguntas'] = 3;
+        $room_service->cadastrar($data);
+
+        $room_edit = $room_service->buscaSala($data['nomeSala']);
+        $room = $this->getService('RoomService');
+        $data['nomeSala'] = 'Nova Sala';
+        $room_service->dadosParaEditar($data, $room_edit);
+
+        $data = $this->getEntityManager()->getRepository('\Application\Entity\SalaEntity')->findAll();
+        $this->assertCount(1, $data);
+        $room = $data[0]->nomeSala;
+        $this->assertEquals('Nova Sala', $sala);
     }
 
     /**
