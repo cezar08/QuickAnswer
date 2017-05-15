@@ -26,7 +26,6 @@ class TypeMutipleOptionsEntity
      *
      * @var string
      */
-
     protected $Choices;
 
 
