@@ -5,7 +5,7 @@ class TypeQuickAnswer
 {
     protected $id;
 
-    protected $answer;
+    protected $Answer;
 
     public function getArrayCopy()
     {

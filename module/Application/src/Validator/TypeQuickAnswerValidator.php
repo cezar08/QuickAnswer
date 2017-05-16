@@ -27,13 +27,13 @@ class TypeQuickAnswerValidator extends InputFilter
         $this->add(
             $factory->createInput(
                 array(
-                    'name' => 'answer',
+                    'name' => 'Answer',
                     'required' => true,
                     'validators' => array(
                         array(
                             'name' => 'IsInstanceOf',
                             'options' => array(
-                                'className' => 'Application\Entity\answer'
+                                'className' => 'Application\Entity\Answer'
                             )
                         )
                     )
