@@ -27,7 +27,7 @@ class UserValidatorTest extends TestCase
             'password' => 'Xret34Piy',
             'email' => 'joao@gmail.com',
             'picture' => 'img/pictures/AjcKlsdf.jpg',
-            'typeAuth' => 'FACEBOOK',
+            'typeAuth' => '1',
             'university' => 'Unochapecó'
         ];
         $this->invalidDataProvider = [
