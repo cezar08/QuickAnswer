@@ -38,7 +38,7 @@ class SalaValidatorTest extends TestCase
     {
         $salaValidator = new SalaValidator();
         $salaValidatorArrayCopy = $salaValidator;
-        $salaValidatorFields = array_key($salaValidatorArrayCopy);
+        $salaValidatorFields = array_keys($salaValidatorArrayCopy);
 
         foreach ($salaValidatorFields as $field) {
             if (! $salaValidator->has($field)) {
