@@ -47,11 +47,10 @@ class UserEntity extends Entity implements UserEntityInterface
     protected $password;
 
     /**
-     * @ORM\Column(type="date", nullable=true)
+     * @ORM\Column(type="integer", nullable=false)
      *
-     * @var \DateTime
+     * @var int
      */
-    protected $birthDate;
 
     protected $typeAuth;
 

@@ -2,11 +2,12 @@
 
 namespace Application\Service;
 
+use Application\Interfaces\AuthServiceInterface;
 use Doctrine\ORM\EntityManager;
 use Zend\Validator\EmailAddress;
 use Zend\Validator\StringLength;
 
-class AuthService
+class AuthService implements AuthServiceInterface
 {
 
     protected $entityManger;
@@ -15,6 +16,11 @@ class AuthService
     {
         $this->entityManger = $entityManager;
     }
+
+    /**
+     * @param array $data [['type' => 'string', 'name' => 'email'], ['type' => 'string', 'name' => 'password']]
+     * @return array
+     */
 
     public function dataBaseAuth($data)
     {
@@ -46,5 +52,20 @@ class AuthService
                 'password' => $validatorPassword->getMessages()
             ]];
         }
+    }
+
+
+    public function facebookAuth($data)
+    {
+        /*
+         * FUNÇÃO QUE SERÁ IMPLEMENTADA FUTURAMENTE
+         */
+    }
+
+    public function gmailAuth($data)
+    {
+        /*
+         * FUNÇÃO QUE SERÁ IMPLEMENTADA FUTURAMENTE
+         */
     }
 }
