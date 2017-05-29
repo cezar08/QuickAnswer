@@ -7,7 +7,7 @@ use Zend\InputFilter\Factory as InputFactory;
 
 class UserValidator extends InputFilter
 {
-
+//Teste
     public function __construct()
     {
         $factory = new InputFactory();
