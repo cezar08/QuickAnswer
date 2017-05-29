@@ -60,5 +60,4 @@ class SalaEntity extends Entity
      * @var string
      */
     protected $perguntas;
-
 }
