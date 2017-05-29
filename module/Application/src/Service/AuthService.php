@@ -55,12 +55,17 @@ class AuthService implements AuthServiceInterface
     }
 
 
-    public function facebookAuth($data){
-
+    public function facebookAuth($data)
+    {
+        /*
+         * FUNÇÃO QUE SERÁ IMPLEMENTADA FUTURAMENTE
+         */
     }
 
-    public function gmailAuth($data){
-
+    public function gmailAuth($data)
+    {
+        /*
+         * FUNÇÃO QUE SERÁ IMPLEMENTADA FUTURAMENTE
+         */
     }
-
 }
