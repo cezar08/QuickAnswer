@@ -40,6 +40,7 @@ class AuthServiceTest extends \ApplicationTest\Service\AbstractServiceTestCase
         $user->email = $this->validData['email'];
         $user->password = password_hash($this->validData['password'], PASSWORD_DEFAULT);
         $user->name = 'João';
+        $user->typeAuth = '1';
         $entityManager = $this->getApplicationServiceLocator()
             ->get('Doctrine\ORM\EntityManager');
         $entityManager->persist($user);

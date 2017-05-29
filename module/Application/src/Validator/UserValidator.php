@@ -51,7 +51,7 @@ class UserValidator extends InputFilter
             $factory->createInput(
                 [
                     'name' => 'password',
-                    'required' => false,
+                    'required' => true,
                     'validators' => [
                         [
                             'name' => 'StringLength',
@@ -85,7 +85,7 @@ class UserValidator extends InputFilter
                         [
                             'name' => 'InArray',
                             'options' => [
-                                'haystack' => ['FACEBOOK', 'GMAIL', 'LOCAL']
+                                'haystack' => ['1', '2', '3']
                             ]
                         ]
                     ]
