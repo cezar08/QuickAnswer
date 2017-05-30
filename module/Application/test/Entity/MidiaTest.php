@@ -13,6 +13,7 @@ use Application\Entity\MidiaEntity;
 use Application\Interfaces\MidiaEntityInterface;
 use PHPUnit\Framework\TestCase;
 use Application\Entity\MidiaEntity as Midia;
+
 /**
  * Class MidiaTest
  * @package ApplicationTest\Entity
