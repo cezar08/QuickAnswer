@@ -92,7 +92,7 @@ class MidiaValidator extends InputFilter
         $this->add(
             $factory->createInput(
                 [
-                    'name' => 'typeofmidia',
+                    'name' => 'typeOfMidia',
                     'required' => true,
                     'filters' =>
                         [
