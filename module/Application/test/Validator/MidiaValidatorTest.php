@@ -23,13 +23,13 @@ class MidiaValidatorTest extends TestCase
         parent::setUp();
         $this->dataProvider = [
             'id' => null,
-            'typeofmidia' => 1,
+            'typeOfMidia' => 1,
             'description' => 'fotoTeste',
             'dateMidia' => '17/04/2017',
             'path' => 'img/pictures/teste.jpg'
         ];
         $this->invalidDataProvider = [
-            'typeofmidia' => null,
+            'typeOfMidia' => null,
             'description' => '',
             'dateMidia' => '2017/04/17',
             'path' => null
@@ -49,7 +49,7 @@ class MidiaValidatorTest extends TestCase
         $validator = new MidiaValidator();
         $validator->setData($this->invalidDataProvider);
         $this->assertFalse($validator->isValid());
-        $this->assertArrayHasKey('typeofmidia', $validator->getMessages());
+        $this->assertArrayHasKey('typeOfMidia', $validator->getMessages());
         $this->assertArrayHasKey('isEmpty', $validator->getMessages()['description']);
         $this->assertArrayHasKey('dateMidia', $validator->getMessages());
         $this->assertArrayHasKey('dateFalseFormat', $validator->getMessages()['dateMidia']);
