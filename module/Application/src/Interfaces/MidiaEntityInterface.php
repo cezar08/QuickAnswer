@@ -20,7 +20,7 @@ class MidiaEntity extends Entity implements MidiaEntityInterface
      *
      * @var int
      */
-    protected $_id;
+    protected $id;
 
     /**
      * @ORM\TypeOfMidia
@@ -28,26 +28,26 @@ class MidiaEntity extends Entity implements MidiaEntityInterface
      *
      * @var int
      */
-    protected $_typeOfMidia;
+    protected $typeOfMidia;
 
     /**
      * @ORM\Column(type="string", length=60, nullable=false)
      *
      * @var string
      */
-    protected $_description;
+    protected $description;
 
     /**
      * @ORM\Column(type="date", nullable=false)
      *
      * @var date
      */
-    protected $_dateMidia;
+    protected $dateMidia;
 
     /**
      * @ORM\Column(type="string", length=120, nullable=false)
      *
      * @var string
      */
-    protected $_path;
+    protected $path;
 }
