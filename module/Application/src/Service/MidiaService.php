@@ -3,8 +3,10 @@
  * @author Rafael/Alessandro
  */
 namespace Application\Service;
+
 use Application\Entity\MidiaEntity;
 use Application\Validator\MidiaValidator;
+
 class MidiaService extends Service
 {
     /**
@@ -25,9 +27,9 @@ class MidiaService extends Service
             $this->getEntityManager()->persist($usuario);
             $this->getEntityManager()->flush();
 
-            return array('success' => 'Midia armazenada com sucesso');
-        }catch (\Exception $e){
-            return array('error' => $e->getMessage());
+            return ['success' => 'Midia armazenada com sucesso'];
+        } catch (\Exception $e) {
+            return ['error' => $e->getMessage()];
         }
     }
 }
