@@ -3,5 +3,5 @@ namespace Application\Interfaces;
 
 interface UserEntityInterface
 {
-    
+
 }

@@ -10,7 +10,7 @@
  *
  * This should be an array of module namespaces used in the application.
  */
-return array(
+return [
     'Zend\Cache',
     'Zend\Form',
     'Zend\InputFilter',
@@ -22,4 +22,4 @@ return array(
     'DoctrineModule',
     'DoctrineORMModule',
     'Application',
-);
+];
