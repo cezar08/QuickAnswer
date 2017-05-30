@@ -2,10 +2,11 @@
 
 namespace Application\Validator;
 
+use Application\Interfaces\TypeQuickAnswerValidatorInterface;
 use Zend\InputFilter\InputFilter;
 use Zend\InputFilter\Factory as InputFactory;
 
-class TypeQuickAnswerValidator extends InputFilter
+class TypeQuickAnswerValidator extends InputFilter implements TypeQuickAnswerValidatorInterface
 {
     public function __construct()
     {

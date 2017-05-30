@@ -2,6 +2,7 @@
 
 namespace ApplicationTest\Entity;
 
+use Application\Entity\TypeQuickAnswer;
 use PHPUnit\Framework\TestCase;
 use Application\Entity\TypeMutipleOptionsEntity as TypeMultipleOptions;
 
