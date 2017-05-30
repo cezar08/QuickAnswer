@@ -5,7 +5,7 @@
 namespace Application\Service;
 use Application\Entity\MidiaEntity;
 use Application\Validator\MidiaValidator;
-class PerfilService extends Service
+class MidiaService extends Service
 {
     /**
      * Método que insere uma nova
