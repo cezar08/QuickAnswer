@@ -10,7 +10,7 @@ namespace ApplicationTest\Entity;
 
 use Application\Entity\Entity;
 use Application\Entity\MidiaEntity;
-use Application\Interfaces\MidiaInterface;
+use Application\Interfaces\MidiaEntityInterface;
 use PHPUnit\Framework\TestCase;
 use Application\Entity\MidiaEntity as Midia;
 /**
@@ -48,10 +48,10 @@ class MidiaTest extends TestCase
      */
     public function testNamesAttributes($arrayCopy)
     {
-        $this->assertArrayHasKey('id', $arrayCopy);
-        $this->assertArrayHasKey('typeofmidia', $arrayCopy);
-        $this->assertArrayHasKey('description', $arrayCopy);
-        $this->assertArrayHasKey('dateMidia', $arrayCopy);
-        $this->assertArrayHasKey('path', $arrayCopy);
+        $this->assertArrayHasKey('_id', $arrayCopy);
+        $this->assertArrayHasKey('_typeOfMidia', $arrayCopy);
+        $this->assertArrayHasKey('_description', $arrayCopy);
+        $this->assertArrayHasKey('_dateMidia', $arrayCopy);
+        $this->assertArrayHasKey('_path', $arrayCopy);
     }
 }
