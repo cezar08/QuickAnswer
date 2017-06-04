@@ -4,6 +4,10 @@ namespace Application\Entity;
 
 abstract class Entity
 {
+    /**
+     * @param string $name
+     * @param string $value
+     */
 
     public function __set($name, $value)
     {
