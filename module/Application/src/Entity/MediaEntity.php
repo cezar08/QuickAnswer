@@ -17,7 +17,7 @@ class MediaEntity extends Entity implements MediaEntityInterface
 	/**
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
-     * @ORM\Column(type = "integer",name="id_of_media")
+     * @ORM\Column(type = "integer")
      *
      * @var int
      */
@@ -50,14 +50,4 @@ class MediaEntity extends Entity implements MediaEntityInterface
      * @var string
      */
     protected $path;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="UserEntity",
-     * inversedBy="MediaEntity", cascade={"persist"})
-     * @ORM\JoinColumn(name="Id",
-     * referencedColumnName="id_of_media", nullable=False)
-     *
-     * @var object
-     */
-    protected $userOfMedia;
 }

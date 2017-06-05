@@ -22,7 +22,6 @@ class MediaService extends Service
     public function persistMedia($media_type, $media_desc, $media_path, $id_user)
     {
         try {
-            // $user = $this->consultarUsuario($id_user);
             $media = new Media();
             $media->$typeOfMedia = $media_type;
             $media->$description = $media_desc;
