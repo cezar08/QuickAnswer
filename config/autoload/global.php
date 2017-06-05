@@ -3,12 +3,12 @@ return [
     'doctrine' => [
         'connection' => [
             'orm_default' => [
-                'driverClass' => 'Doctrine\DBAL\Driver\PDOMySql\Driver',
+                'driverClass' => 'Doctrine\DBAL\Driver\PDOPgSql\Driver',
                     'params' => [
-                        'host' => 'localhost',
+                        'host' => '127.0.0.1',
                         'port' => '3306',
-                        'user' => 'zf3',
-                        'password' => 'root',
+                        'user' => 'postgres',
+                        'password' => ' ',
                         'dbname' => 'db_qa_test'
                     ]
                 ]
