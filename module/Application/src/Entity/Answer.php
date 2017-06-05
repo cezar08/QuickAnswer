@@ -12,6 +12,8 @@ namespace Application\Entity;
 class Answer
 {
     protected  $user;
+    protected  $question;
+    protected  $answer;
 
     public function getArrayCopy()
     {
