@@ -17,7 +17,8 @@
         "zendframework/zend-mvc": "^3.0.1",
         "zfcampus/zf-development-mode": "^3.0",
         "squizlabs/php_codesniffer": "*",
-        "doctrine/doctrine-orm-module": "^1.1"
+        "doctrine/doctrine-orm-module": "^1.1",
+        "zendframework/zend-inputfilter": "^2.7"
     },
     "autoload": {
         "psr-4": {
