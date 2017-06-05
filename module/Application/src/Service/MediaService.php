@@ -1,34 +1,36 @@
 <?php
-/**
- * @author Rafael/Alessandro
- */
+
 namespace Application\Service;
 
+use Doctrine\ORM\EntityManager;
 use Application\Entity\MediaEntity;
 use Application\Validator\MediaValidator;
 
-class MediaService extends Service
+class MediaService
 {
+    protected $entityManger;
+
+    public function __construct(EntityManager $entityManager)
+    {
+        $this->entityManger = $entityManager;
+    }
+
     /**
      * Method that inserts a new
      * Media in the database.
      *
-     * @param object $id_user         receives the id of user.
      * @param object $media_type receives the media type.
-     * @param object $media_desc receives the media description.
      * @param object $media_path receives the media path.
      *
      * @return mixed
      */
-    public function persistMedia($media_type, $media_desc, $media_path, $id_user)
+    public function persistMedia($media_type, $media_path)
     {
         try {
             $media = new Media();
-            $media->$typeOfMedia = $media_type;
-            $media->$description = $media_desc;
-            $media->$dateOfMedia = strtotime((new \DateTime('now'))->format('Y-m-d H:i'));
-            $media->$path = $media_path;
-            $media->$userOfmedia = $id_user;
+            $media->typeOfMedia = $media_type;
+            $media->dateOfMedia = strtotime((new \DateTime('now'))->format('Y-m-d H:i'));
+            $media->path = $media_path;
 
             $this->getEntityManager()->persist($media);
             $this->getEntityManager()->flush();

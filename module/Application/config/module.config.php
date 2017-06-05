@@ -7,7 +7,9 @@
 
 namespace Application;
 
+use Application\Controller\ExemploFactoryController;
 use Application\Service\AuthService;
+use Application\Service\FactoryService;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -21,6 +23,16 @@ return [
                     'route' => '/',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
+                        'action' => 'index',
+                    ],
+                ],
+            ],
+            'exemploFactory' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route' => '/exemplo-factory',
+                    'defaults' => [
+                        'controller' => Controller\ExemploFactoryController::class,
                         'action' => 'index',
                     ],
                 ],
@@ -40,6 +52,10 @@ return [
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
+            Controller\ExemploFactoryController::class => function ($sm) {
+
+                return new ExemploFactoryController($sm);
+            }
         ],
     ],
     'doctrine' => [
@@ -72,6 +88,10 @@ return [
 
             return new MediaService($entityManager);
           },
+          'FactoryService' => function($sm) {
+
+            return new FactoryService(new \DateTime());
+          }
       ]
     ],
     'view_manager' => [
@@ -89,5 +109,8 @@ return [
         'template_path_stack' => [
             __DIR__ . '/../view',
         ],
+        'strategies' => [
+            'ViewJsonStrategy'
+        ]
     ],
 ];

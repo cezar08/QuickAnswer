@@ -35,28 +35,6 @@ class MediaValidator extends InputFilter
         $this->add(
             $factory->createInput(
                 [
-                    'name' => 'description',
-                    'required' => true,
-                    'filters' => [
-                        ['name' => 'StripTags'],
-                        ['name' => 'StringTrim']
-                    ],
-                    'validators' => [
-                        [
-                            'name' => 'StringLength',
-                            'options' => [
-                                'encoding' => 'UTF-8',
-                                'min' => 1,
-                                'max' => 60
-                            ]
-                        ]
-                    ],
-                ]
-            )
-        );
-        $this->add(
-            $factory->createInput(
-                [
                     'name' => 'path',
                     'required' => true,
                     'validators' => [

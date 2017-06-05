@@ -31,13 +31,6 @@ class MediaEntity extends Entity implements MediaEntityInterface
     protected $typeOfMedia;
 
     /**
-     * @ORM\Column(type="string", length=60, nullable=false)
-     *
-     * @var string
-     */
-    protected $description;
-
-    /**
      * @ORM\Column(type="date", nullable=false)
      *
      * @var date

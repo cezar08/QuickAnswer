@@ -51,7 +51,6 @@ class MediaTest extends TestCase
     {
         $this->assertArrayHasKey('id', $arrayCopy);
         $this->assertArrayHasKey('typeOfMedia', $arrayCopy);
-        $this->assertArrayHasKey('description', $arrayCopy);
         $this->assertArrayHasKey('dateOfMedia', $arrayCopy);
         $this->assertArrayHasKey('path', $arrayCopy);
     }

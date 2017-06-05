@@ -24,13 +24,11 @@ class MediaValidatorTest extends TestCase
         $this->dataProvider = [
             'id' => null,
             'typeOfMedia' => 1,
-            'description' => 'fotoTeste',
             'dateOfMedia' => '17/04/2017',
             'path' => 'img/pictures/teste.jpg'
         ];
         $this->invalidDataProvider = [
             'typeOfMedia' => null,
-            'description' => '',
             'dateOfMedia' => '2017/04/17',
             'path' => null
 
@@ -50,7 +48,6 @@ class MediaValidatorTest extends TestCase
         $validator->setData($this->invalidDataProvider);
         $this->assertFalse($validator->isValid());
         $this->assertArrayHasKey('typeOfMedia', $validator->getMessages());
-        $this->assertArrayHasKey('isEmpty', $validator->getMessages()['description']);
         $this->assertArrayHasKey('dateOfMedia', $validator->getMessages());
         $this->assertArrayHasKey('dateFalseFormat', $validator->getMessages()['dateOfMedia']);
         $this->assertArrayHasKey('dateInvalidDate', $validator->getMessages()['dateOfMedia']);
@@ -60,11 +57,9 @@ class MediaValidatorTest extends TestCase
     public function testFilters()
     {
         $validator = new MediaValidator();
-        $this->dataProvider['description'] = '<a href="www.google.com">fotoTeste</a>                          ';
         $this->dataProvider['id'] = 'teste_erro';
         $validator->setData($this->dataProvider);
         $data = $validator->getValues();
-        $this->assertEquals("fotoTeste", $data['description']);
         $this->assertEquals(0, $data['id']);
     }
 }
