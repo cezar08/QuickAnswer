@@ -7,6 +7,7 @@ namespace Application\Interfaces;
  * @package Application\Interfaces
  */
 
+
 interface QuestionEntityInterface
 {
 
