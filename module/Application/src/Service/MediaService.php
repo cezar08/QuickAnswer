@@ -11,11 +11,12 @@ class MediaService extends Service
 {
     /**
      * Method that inserts a new
-     * Picture in Existing User
-     * In the database.
+     * Media in the database.
      *
      * @param object $id_user         receives the id of user.
-     * @param object $path receives the image path.
+     * @param object $media_type receives the media type.
+     * @param object $media_desc receives the media description.
+     * @param object $media_path receives the media path.
      *
      * @return mixed
      */
