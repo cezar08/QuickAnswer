@@ -8,7 +8,7 @@ return [
                         'host' => '127.0.0.1',
                         'port' => '3306',
                         'user' => 'postgres',
-                        'password' => ' ',
+                        'password' => 'root',
                         'dbname' => 'db_qa_test'
                     ]
                 ]

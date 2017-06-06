@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
+## 2.2.2 - 2017-05-17
+
+### Added
+
+### Changes
+
+- [#42](https://github.com/zendframework/zend-hydrator/pull/42) updates the
+  `ConfigProvider::getDependencies()` method to map the `HydratorPluginManager`
+  class to the `HydratorPluginManagerFactory` class, and make the
+  `HydratorManager` service an alias to the fully-qualified
+  `HydratorPluginManager` class.
+- [#45](https://github.com/zendframework/zend-hydrator/pull/45) changes the
+  `ClassMethods` hydrator to take into account naming strategies when present,
+  making it act consistently with the other hydrators.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- [#59](https://github.com/zendframework/zend-hydrator/pull/59) fixes how the
+  `HydratorPluginManagerFactory` factory initializes the plugin manager
+  instance, ensuring it is injecting the relevant configuration from the
+  `config` service and thus seeding it with configured hydrator services. This
+  means that the `hydrators` configuration will now be honored in non-zend-mvc
+  contexts.
+
 ## 2.2.1 - 2016-04-18
 
 ### Added

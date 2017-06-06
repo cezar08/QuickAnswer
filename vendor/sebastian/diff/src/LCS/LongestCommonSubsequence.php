@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the Diff package.
+ * This file is part of sebastian/diff.
  *
  * (c) Sebastian Bergmann <sebastian@phpunit.de>
  *
@@ -11,7 +11,7 @@
 namespace SebastianBergmann\Diff\LCS;
 
 /**
- * Interfaces for implementations of longest common subsequence calculation.
+ * Interface for implementations of longest common subsequence calculation.
  */
 interface LongestCommonSubsequence
 {

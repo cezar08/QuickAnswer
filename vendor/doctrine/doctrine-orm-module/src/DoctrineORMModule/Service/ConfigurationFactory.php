@@ -23,6 +23,7 @@ use Doctrine\ORM\Cache\CacheConfiguration;
 use Doctrine\ORM\Cache\DefaultCacheFactory;
 use Doctrine\ORM\Cache\RegionsConfiguration;
 use Doctrine\ORM\Mapping\EntityListenerResolver;
+use DoctrineORMModule\Options\Configuration as DoctrineORMModuleConfiguration;
 use DoctrineORMModule\Service\DBALConfigurationFactory as DoctrineConfigurationFactory;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
@@ -38,7 +39,7 @@ class ConfigurationFactory extends DoctrineConfigurationFactory
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        /** @var $options \DoctrineORMModule\Options\Configuration */
+        /** @var $options DoctrineORMModuleConfiguration */
         $options = $this->getOptions($container);
         $config  = new Configuration();
 
@@ -78,7 +79,7 @@ class ConfigurationFactory extends DoctrineConfigurationFactory
 
         if ($namingStrategy = $options->getNamingStrategy()) {
             if (is_string($namingStrategy)) {
-                if (!$container->has($namingStrategy)) {
+                if (! $container->has($namingStrategy)) {
                     throw new InvalidArgumentException(sprintf('Naming strategy "%s" not found', $namingStrategy));
                 }
 
@@ -90,7 +91,7 @@ class ConfigurationFactory extends DoctrineConfigurationFactory
 
         if ($quoteStrategy = $options->getQuoteStrategy()) {
             if (is_string($quoteStrategy)) {
-                if (!$container->has($quoteStrategy)) {
+                if (! $container->has($quoteStrategy)) {
                     throw new InvalidArgumentException(sprintf('Quote strategy "%s" not found', $quoteStrategy));
                 }
 
@@ -102,7 +103,7 @@ class ConfigurationFactory extends DoctrineConfigurationFactory
 
         if ($repositoryFactory = $options->getRepositoryFactory()) {
             if (is_string($repositoryFactory)) {
-                if (!$container->has($repositoryFactory)) {
+                if (! $container->has($repositoryFactory)) {
                     throw new InvalidArgumentException(
                         sprintf('Repository factory "%s" not found', $repositoryFactory)
                     );
@@ -166,8 +167,11 @@ class ConfigurationFactory extends DoctrineConfigurationFactory
         return $this($container, Configuration::class);
     }
 
+    /**
+     * @return string
+     */
     protected function getOptionsClass()
     {
-        return 'DoctrineORMModule\Options\Configuration';
+        return DoctrineORMModuleConfiguration::class;
     }
 }

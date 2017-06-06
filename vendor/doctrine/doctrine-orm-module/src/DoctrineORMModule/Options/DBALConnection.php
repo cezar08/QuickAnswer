@@ -19,6 +19,7 @@
 
 namespace DoctrineORMModule\Options;
 
+use Doctrine\DBAL\Driver\PDOMySql\Driver;
 use Zend\Stdlib\AbstractOptions;
 
 /**
@@ -62,7 +63,7 @@ class DBALConnection extends AbstractOptions
      *
      * @var string
      */
-    protected $driverClass = 'Doctrine\DBAL\Driver\PDOMySql\Driver';
+    protected $driverClass = Driver::class;
 
     /**
      * Set the wrapper class for the driver. In general, this should not
@@ -77,17 +78,17 @@ class DBALConnection extends AbstractOptions
      *
      * @var array
      */
-    protected $params = array();
+    protected $params = [];
 
     /**
      * @var array
      */
-    protected $doctrineTypeMappings = array();
+    protected $doctrineTypeMappings = [];
 
     /**
      * @var array
      */
-    protected $doctrineCommentedTypes = array();
+    protected $doctrineCommentedTypes = [];
 
     /**
      * @param string $configuration
