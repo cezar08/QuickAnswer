@@ -27,7 +27,7 @@ class MediaService
     public function persistMedia($media_type, $media_path)
     {
         try {
-            $media = new Media();
+            $media = new MediaService();
             $media->typeOfMedia = $media_type;
             $media->dateOfMedia = strtotime((new \DateTime('now'))->format('Y-m-d H:i'));
             $media->path = $media_path;

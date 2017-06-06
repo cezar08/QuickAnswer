@@ -23,7 +23,7 @@ class MediaValidatorTest extends TestCase
         parent::setUp();
         $this->dataProvider = [
             'id' => null,
-            'typeOfMedia' => 1,
+            'typeOfMedia' => '1',
             'dateOfMedia' => '17/04/2017',
             'path' => 'img/pictures/teste.jpg'
         ];

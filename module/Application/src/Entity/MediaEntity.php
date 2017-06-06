@@ -24,9 +24,9 @@ class MediaEntity extends Entity implements MediaEntityInterface
     protected $id;
 
     /**
-     * @ORM\Column(type = "integer")
+     * @ORM\Column(type="string", length=60, nullable=false)
      *
-     * @var int
+     * @var string
      */
     protected $typeOfMedia;
 

@@ -9,6 +9,7 @@ namespace Application;
 
 use Application\Controller\ExemploFactoryController;
 use Application\Service\AuthService;
+use Application\Service\MediaService;
 use Application\Service\FactoryService;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;

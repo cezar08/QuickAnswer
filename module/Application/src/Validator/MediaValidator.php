@@ -72,12 +72,16 @@ class MediaValidator extends InputFilter
                 [
                     'name' => 'typeOfMedia',
                     'required' => true,
-                    'filters' =>
+                    'validators' => [
                         [
-                            [
-                                'name' => 'Int'
+                            'name' => 'StringLength',
+                            'options' => [
+                                'encoding' => 'UTF-8',
+                                'min' => 1,
+                                'max' => 60
                             ]
                         ]
+                    ]
                 ]
             )
         );
