@@ -11,7 +11,7 @@ namespace Application\Validator;
 use Zend\InputFilter\InputFilter;
 use Zend\InputFilter\Factory as InputFactory;
 
-class SalaValidator extends InputFilter
+class RoomValidator extends InputFilter
 {
     public function __construct()
     {
@@ -34,7 +34,7 @@ class SalaValidator extends InputFilter
         $this->add(
             $factory->createInput(
                 [
-                    'name' => 'nomeSala',
+                    'name' => 'roomName',
                     'required' => true,
                     'filters' => [
                         ['name' => 'StripTags'],
@@ -57,7 +57,7 @@ class SalaValidator extends InputFilter
         $this->add(
             $factory->createInput(
                 [
-                    'name' => 'dataCriacao',
+                    'name' => 'createDate',
                     'required' => false,
                     'validators' => [
                         [
@@ -74,7 +74,7 @@ class SalaValidator extends InputFilter
         $this->add(
             $factory->createInput(
                 [
-                    'name' => 'tipo',
+                    'name' => 'type',
                     'required' => true,
                     'validators' => [
                         [
@@ -91,7 +91,7 @@ class SalaValidator extends InputFilter
         $this->add(
             $factory->createInput(
                 [
-                    'name' => 'usuario',
+                    'name' => 'user',
                     'required' => true,
                     'filters' => [
                         ['name' => 'StripTags'],
@@ -114,7 +114,7 @@ class SalaValidator extends InputFilter
         $this->add(
             $factory->createInput(
                 [
-                    'name' => 'perguntas',
+                    'name' => 'question',
                     'required' => true,
                     'validators' => [
                         [

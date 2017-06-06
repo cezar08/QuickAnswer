@@ -15,7 +15,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="sale_qa")
  */
-class SalaEntity extends Entity
+class RoomEntity extends Entity
 {
     /**
      * @ORM\Id
@@ -31,33 +31,33 @@ class SalaEntity extends Entity
      *
      * @var string
      */
-    protected $nomeSala;
+    protected $roomName;
 
     /**
      * @ORM\Column(type="date")
      *
      * @var \DateTime
      */
-    protected $dataCriacao;
+    protected $createDate;
 
     /**
      * @ORM\Column(type="string", length=100, nullable=false)
      *
      * @var string
      */
-    protected $tipo;
+    protected $type;
 
     /**
      * @ORM\Column(type="string", length=100, nullable=false)
      *
      * @var string
      */
-    protected $usuario;
+    protected $user;
 
     /**
      * @ORM\Column(type="string", length=250, nullable=false)
      *
      * @var string
      */
-    protected $perguntas;
+    protected $question;
 }

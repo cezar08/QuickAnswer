@@ -8,7 +8,7 @@ use Application\Entity\SalaEntity;
 use Application\Validator\SalaValidator;
 use Doctrine\ORM\EntityManager;
 
-class SalaService
+class RoomService
 {
 
     protected $entityManager;
@@ -28,11 +28,11 @@ class SalaService
      * @param $dados
      * @return array $result
      */
-    public function cadastrar($dados)
+    public function create($dados)
     {
-        $validator = $this->validacao($dados);
-        $dados = $validator->getValues();
-        $salaBanco = $this->buscaSala($dados);
+        $validator = $this->validation($dados);
+        $data = $validator->getValues();
+        $roomdb = $this->buscaSala($dados);
 
         if (! $validator->isValid()) {
             throw new ValidatorException(
@@ -43,11 +43,11 @@ class SalaService
             );
         }
 
-        if (sizeof($salaBanco) != 0) {
+        if (sizeof($roomdb) != 0) {
             $result = ['error' => 'existe'];
         } else {
-            $result = new Sala();
-            $result - $this->persistir($result, $dados);
+            $result = new Room();
+            $result - $this->persit($result, $data);
         }
 
         return $result;
@@ -62,18 +62,18 @@ class SalaService
      * @param $usuario
      * @return array $salas
      */
-    public function listarSalas($dados, $usuario)
+    public function listRoom($data, $user)
     {
-        $salas = $this->buscaSala($dados);
-        $usuario = " "; //presumo que deva existir um metodo que busque um usuario e retorne um objeto
+        $rooms = $this->searchRoom($data);
+        $user = " "; //presumo que deva existir um metodo que busque um usuario e retorne um objeto
 
-        foreach ($salas as $key => $sala) {
-            if ($sala.tipo == "privado" && $sala.usuario != $usuario.id) {
-                unset($sala);
+        foreach ($room as $key => $rooms) {
+            if ($room.type == "privado" && $room.user != $user.id) {
+                unset($room);
             }
         }
 
-        return $salas;
+        return $rooms;
     }
 
     /**
@@ -85,16 +85,16 @@ class SalaService
      * @param $dados
      * @return $select resultado da query
      */
-    private function buscaSala($dados)
+    private function searchRoom($data)
     {
-        $sala = $dados['sala'];
+        $room = $data['room'];
 
         $select = $this->entityManager->createQueryBuilder()
                         ->select('Sala')
                         ->from('Entity\Sala', 'Sala')
                         ->where('Sala.nomeSala = :SalaBusca')
 
-                        ->setParameter('SalaBusca', $sala);
+                        ->setParameter('SalaBusca', $room);
 
         return $select->getQuery()->getResult();
     }
@@ -105,12 +105,12 @@ class SalaService
      * @param $id
      * @return $sala objeto
      */
-    private function buscaSalaObjeto($id)
+    private function searchRoomObject($id)
     {
-        $sala = $this->entityManager
+        $room = $this->entityManager
             ->find('QuickAnswer\Module\Application\Entity\SalaEntity', $id);
 
-        return $sala;
+        return $room;
     }
 
     /**
@@ -120,10 +120,10 @@ class SalaService
      * @param $dados
      * @return SalaValidator
      */
-    protected function validacao($dados)
+    protected function validation($data)
     {
         $validator = new SalaValidator();
-        $validator->setData($dados);
+        $validator->setData($data);
 
         return $validator;
     }
@@ -136,13 +136,13 @@ class SalaService
      * @param $dados
      * @return array
      */
-    public function persistir($sala, $dados)
+    public function persist($room, $data)
     {
         try {
-            $sala->setData($dados);
+            $room->setData($room);
 
             $this->entityManager
-                ->persist($sala);
+                ->persist($room);
             $this->entityManager->flush();
         } catch (\Exception $e) {
             return ['error' => 'Erro ao salvar: '.$e->getMEssage()];
@@ -157,11 +157,11 @@ class SalaService
      * @param $id
      * @param $dados
      */
-    public function editar($id, $dados)
+    public function edit($id, $data)
     {
-        $sala = $this->buscaSalaObjeto($id);
-        $validator = $this->validacao($dados);
-        $this->dadosParaEditar($sala, $validator->getValues());
+        $room = $this->searchRoomObject($id);
+        $validator = $this->validation($data);
+        $this->dataForEdit($room, $validator->getValues());
     }
 
     /**
@@ -172,15 +172,15 @@ class SalaService
      * @param $sala
      * @param $dados
      */
-    public function dadosParaEditar($sala, $dados)
+    public function dataForEdit($room, $data)
     {
-        $sala->nomeSala = $dados['nomeSala'];
-        $sala->dataCriacao = $dados['dataCriacao'];
-        $sala->tipo = $dados['tipo'];
-        $sala->usuario = $dados['usuario'];
-        $sala->perguntas = $dados['perguntas'];
+        $room->roomName = $data['roomName'];
+        $room->createDate = $data['dataCriacao'];
+        $room->type = $data['type'];
+        $room->user = $data['user'];
+        $room->question = $data['question'];
 
-        $this->entityManager->persistir($sala);
+        $this->entityManager->persistir($room);
         $this->entityManager->flush();
     }
 
@@ -191,10 +191,10 @@ class SalaService
      * @param $id
      * @return bool
      */
-    public function excluir($id)
+    public function delete($id)
     {
-        $sala = $this->buscaSalaObjeto($id);
-        $this->entityManager->remove($sala);
+        $room = $this->searchRoomObject($id);
+        $this->entityManager->remove($room);
         $this->entityManager->flush();
 
         return true;

@@ -9,7 +9,7 @@
 namespace ApplicationTest\Entity;
 
 use PHPUnit\Framework\TestCase;
-use Application\Entity\SalaEntity as Sala;
+use Application\Entity\RoomEntity as Room;
 
 /**
  * Class UserTest
@@ -17,11 +17,11 @@ use Application\Entity\SalaEntity as Sala;
  * @group Entities
  */
 
-class SalaTest extends TestCase
+class RoomTest extends TestCase
 {
     public function testAmountAttributes()
     {
-        $arrayCopy = (new Sala())->getArrayCopy();
+        $arrayCopy = (new Room())->getArrayCopy();
         $this->assertEquals(6, count($arrayCopy));
 
         return $arrayCopy;
@@ -38,10 +38,10 @@ class SalaTest extends TestCase
     public function testNamesAttributes($arrayCopy)
     {
         $this->assertArrayHasKey('id', $arrayCopy);
-        $this->assertArrayHasKey('nomeSala', $arrayCopy);
-        $this->assertArrayHasKey('dataCriacao', $arrayCopy);
-        $this->assertArrayHasKey('tipo', $arrayCopy);
-        $this->assertArrayHasKey('usuario', $arrayCopy);
-        $this->assertArrayHasKey('perguntas', $arrayCopy);
+        $this->assertArrayHasKey('roomName', $arrayCopy);
+        $this->assertArrayHasKey('createDate', $arrayCopy);
+        $this->assertArrayHasKey('type', $arrayCopy);
+        $this->assertArrayHasKey('user', $arrayCopy);
+        $this->assertArrayHasKey('question', $arrayCopy);
     }
 }

@@ -4,8 +4,8 @@ namespace Zend\Mvc;
 interface SalaInterface
 {
     // Método para buscar uma sala
-    public function buscaSala();
+    public function searchRoom();
 
     // Método para definir se a sala é privada ou pública
-    public function definePerfilSala();
+    public function defineProfileRoom();
 }
