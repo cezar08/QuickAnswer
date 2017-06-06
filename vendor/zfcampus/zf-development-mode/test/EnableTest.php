@@ -100,7 +100,7 @@ class EnableTest extends TestCase
         vfsStream::newFile('config/development.config.php.dist')
             ->at($this->projectDir)
             ->setContent('<' . "?php\nreturn [];");
-        vfsStream::newFile('config/autoload/development.local.php')
+        vfsStream::newFile('config/autoload/development.local.php.dist')
             ->at($this->projectDir)
             ->setContent('<' . "?php\nreturn [];");
         vfsStream::newFile('config/application.config.php')

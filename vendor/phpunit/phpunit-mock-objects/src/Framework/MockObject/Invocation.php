@@ -9,9 +9,9 @@
  */
 
 /**
- * Interfaces for invocations.
+ * Interface for invocations.
  *
- * @since Interfaces available since Release 1.0.0
+ * @since Interface available since Release 1.0.0
  */
 interface PHPUnit_Framework_MockObject_Invocation
 {

@@ -26,6 +26,7 @@
  *          convertNoticesToExceptions="true"
  *          convertWarningsToExceptions="true"
  *          forceCoversAnnotation="false"
+ *          printerClass="PHPUnit_TextUI_ResultPrinter"
  *          processIsolation="false"
  *          stopOnError="false"
  *          stopOnFailure="false"
@@ -35,8 +36,6 @@
  *          stopOnSkipped="false"
  *          failOnWarning="false"
  *          failOnRisky="false"
- *          extensionsDirectory="tools/phpunit.d"
- *          printerClass="PHPUnit_TextUI_ResultPrinter"
  *          testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
  *          beStrictAboutChangesToGlobalState="false"
  *          beStrictAboutCoversAnnotation="false"
@@ -835,14 +834,6 @@ class PHPUnit_Util_Configuration
             $result['registerMockObjectsFromTestArgumentsRecursively'] = $this->getBoolean(
                 (string) $root->getAttribute('registerMockObjectsFromTestArgumentsRecursively'),
                 false
-            );
-        }
-
-        if ($root->hasAttribute('extensionsDirectory')) {
-            $result['extensionsDirectory'] = $this->toAbsolutePath(
-                    (string) $root->getAttribute(
-                        'extensionsDirectory'
-                    )
             );
         }
 

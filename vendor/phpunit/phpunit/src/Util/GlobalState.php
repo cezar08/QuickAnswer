@@ -38,19 +38,11 @@ class PHPUnit_Util_GlobalState
       'HTTP_POST_FILES'
     ];
 
-    /**
-     * @return string
-     */
     public static function getIncludedFilesAsString()
     {
         return static::processIncludedFilesAsString(get_included_files());
     }
 
-    /**
-     * @param array $files
-     *
-     * @return string
-     */
     public static function processIncludedFilesAsString(array $files)
     {
         $blacklist = new PHPUnit_Util_Blacklist;
@@ -81,9 +73,6 @@ class PHPUnit_Util_GlobalState
         return $result;
     }
 
-    /**
-     * @return string
-     */
     public static function getIniSettingsAsString()
     {
         $result      = '';
@@ -100,9 +89,6 @@ class PHPUnit_Util_GlobalState
         return $result;
     }
 
-    /**
-     * @return string
-     */
     public static function getConstantsAsString()
     {
         $constants = get_defined_constants(true);
@@ -122,9 +108,6 @@ class PHPUnit_Util_GlobalState
         return $result;
     }
 
-    /**
-     * @return string
-     */
     public static function getGlobalsAsString()
     {
         $result            = '';
@@ -164,9 +147,6 @@ class PHPUnit_Util_GlobalState
         return $result;
     }
 
-    /**
-     * @return array
-     */
     protected static function getSuperGlobalArrays()
     {
         if (ini_get('register_long_arrays') == '1') {
@@ -191,11 +171,6 @@ class PHPUnit_Util_GlobalState
                 ')';
     }
 
-    /**
-     * @param array $array
-     *
-     * @return bool
-     */
     protected static function arrayOnlyContainsScalars(array $array)
     {
         $result = true;

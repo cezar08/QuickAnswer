@@ -701,7 +701,7 @@ class PHPUnit_Framework_MockObject_Generator
                 if (!interface_exists($_type, $callAutoload)) {
                     throw new PHPUnit_Framework_MockObject_RuntimeException(
                         sprintf(
-                            'Interfaces "%s" does not exist.',
+                            'Interface "%s" does not exist.',
                             $_type
                         )
                     );

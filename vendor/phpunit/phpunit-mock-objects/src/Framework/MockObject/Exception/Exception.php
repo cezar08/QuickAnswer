@@ -9,9 +9,9 @@
  */
 
 /**
- * Interfaces for exceptions used by PHPUnit_MockObject.
+ * Interface for exceptions used by PHPUnit_MockObject.
  *
- * @since Interfaces available since Release 2.0.6
+ * @since Interface available since Release 2.0.6
  */
 interface PHPUnit_Framework_MockObject_Exception
 {

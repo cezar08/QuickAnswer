@@ -8,8 +8,6 @@
  * file that was distributed with this source code.
  */
 
-use SebastianBergmann\Version;
-
 /**
  * This class defines the current version of PHPUnit.
  *
@@ -32,7 +30,7 @@ class PHPUnit_Runner_Version
         }
 
         if (self::$version === null) {
-            $version       = new Version('5.7.15', dirname(dirname(__DIR__)));
+            $version       = new SebastianBergmann\Version('5.5.4', dirname(dirname(__DIR__)));
             self::$version = $version->getVersion();
         }
 

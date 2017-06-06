@@ -84,7 +84,7 @@ class LazyDouble
         if (!$interface instanceof ReflectionClass) {
             if (!interface_exists($interface)) {
                 throw new InterfaceNotFoundException(
-                    sprintf('Interfaces %s not found.', $interface),
+                    sprintf('Interface %s not found.', $interface),
                     $interface
                 );
             }
