@@ -7,6 +7,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+namespace PHPUnit\Framework\Error;
 
 /**
  * Wrapper for PHP deprecated errors.
@@ -16,7 +17,7 @@
  * PHPUnit_Framework_Error_Deprecated::$enabled = false;
  * </code>
  */
-class PHPUnit_Framework_Error_Deprecated extends PHPUnit_Framework_Error
+class Deprecated extends Error
 {
     public static $enabled = true;
 }
