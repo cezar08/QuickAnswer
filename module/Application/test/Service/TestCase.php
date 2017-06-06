@@ -2,13 +2,13 @@
 
 namespace ApplicationTest\Service;
 
-use PHPUnit_Framework_TestCase;
+
 use Zend\Console\Console;
 use Zend\EventManager\StaticEventManager;
 use Zend\Mvc\Application;
 use Zend\Stdlib\Exception\LogicException;
 
-abstract class TestCase extends PHPUnit_Framework_TestCase
+abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Zend\Mvc\ApplicationInterface
