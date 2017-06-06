@@ -32,8 +32,8 @@ class MediaService
             $media->dateOfMedia = strtotime((new \DateTime('now'))->format('Y-m-d H:i'));
             $media->path = $media_path;
 
-            $this->getEntityManager()->persist($media);
-            $this->getEntityManager()->flush();
+            $this->entityManger->persist($media);
+            $this->entityManger->flush();
 
             return ['success' => 'Media stored successfully'];
         } catch (\Exception $e) {
