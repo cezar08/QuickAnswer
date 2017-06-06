@@ -15,11 +15,15 @@ class AnswerValidatorTest extends TestCase
 
         $this->dataProvider = [
             'user' => null,
+            'questio' => 'primeira questão',
+            'answer' => 'primeira resposta'
 
         ];
 
         $this->invalidDataProvider = [
             'user' => null,
+            'questio' => '',
+            'answer' => ''
 
         ];
     }
