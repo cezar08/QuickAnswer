@@ -2,6 +2,7 @@
 
 namespace Application\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,15 +23,25 @@ class TypeMutipleOptionsEntity
      */
     protected $id;
     /**
-     * @ORM\Column(type="string", length=100, nullable=false)
+     * @ORM\OneToMany(targetEntity="ChoiceEntity", mappedBy="typeMultipleOption")
      *
      * @var string
      */
-    protected $Choices;
+    protected $choices;
+
+    public function __construct()
+    {
+        $this->choices = new ArrayCollection();
+    }
 
 
     public function getArrayCopy()
     {
         return get_object_vars($this);
+    }
+
+    public function __set($name, $value)
+    {
+        return $this->$name = $value;
     }
 }
