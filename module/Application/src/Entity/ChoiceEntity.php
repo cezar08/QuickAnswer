@@ -4,8 +4,26 @@ namespace Application\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+/**
+ * Class TypeMutipleOptionsEntity
+ * @package Application\Entity
+ *
+ * @ORM\Entity
+ * @ORM\Table(name="Choice")
+ */
+
+
 class ChoiceEntity
 {
+     /**
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(type="integer")
+     *
+     * @var int
+     */
+    protected $id;
+
 
     protected $DescriptionChoice;
     protected $correct;
