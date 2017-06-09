@@ -24,8 +24,20 @@ class ChoiceEntity
      */
     protected $id;
 
-
+/**
+*
+* @var integer
+*
+* @ORM\Column(name="DescriptionChoice", type="string", length=100, nullable=false)
+*/
     protected $DescriptionChoice;
+
+/**
+*
+* @var boolean
+*
+* @ORM\Column(name="correct", type="boolean", nullable=false)
+*/
     protected $correct;
 
     /**
