@@ -13,14 +13,16 @@ use Application\Entity\ChoiceEntity;
 use Application\Entity\QuestionEntity;
 use Application\Entity\TypeMutipleOptionsEntity;
 use Application\Entity\TypeQuickAnswer;
+use Application\Validator\AnswerValidator;
 use Application\Validator\QuestionValidator;
+use Application\Validator\TypeMutipleOptionsValidator;
 
 class QuestionService extends AbstractService
 {
 
-    public function saveQuestion($values)
+    public function saveTypeQuickQuestion($values)
     {
-        $validate = new QuestionValidator();
+        $validate = new AnswerValidator();
         $validate->setData($values);
 
         if (!$validate->isValid())
@@ -28,17 +30,33 @@ class QuestionService extends AbstractService
 
         $em = $this->getEntityManager();
         $question = new QuestionEntity();
-
-        if (isset($values['choices'])) {
-            $typeQuestion = new TypeMutipleOptionsEntity();
-            $typeQuestion = $this->setChoices($typeQuestion, $values['choices']);
-        } else {
-            $typeQuestion = new TypeQuickAnswer();
-            $typeQuestion->answer = $values['answer'];
-        }
+        $typeAnswer = new TypeQuickAnswer();
 
         $question->__set("description", $values['description']);
-        $question->__set("TypeQuestion", $typeQuestion);
+        $typeAnswer->__set("answer", $values['answer']);
+        $question->__set("TypeQuestion", $typeAnswer);
+
+        $em->persist($question);
+        $em->flush();
+    }
+
+
+    public function saveTypeMultipleOptionsQuestion($values)
+    {
+        $validate = new TypeMutipleOptionsValidator();
+        $validate->setData($values);
+
+        if (!$validate->isValid())
+            return $validate->getMessages();
+
+        $em = $this->getEntityManager();
+        $question = new QuestionEntity();
+        $typeMultiple = new TypeMutipleOptionsEntity();
+
+        $question->__set("description", $values['description']);
+        $typeMultiple = $this->setChoices($typeMultiple, $values['choices']);
+        $question->__set("TypeQuestion", $typeMultiple);
+
         $em->persist($question);
         $em->flush();
     }
@@ -51,9 +69,7 @@ class QuestionService extends AbstractService
             $newChoice->__set("correct", $choice['description']);
             $typeQuestion->choices->add($newChoice);
         }
-
         return $typeQuestion;
     }
-
 
 }

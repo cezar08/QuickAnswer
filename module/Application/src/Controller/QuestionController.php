@@ -22,12 +22,25 @@ class QuestionController extends AbstractActionController
         $this->sm = $sm;
     }
 
-    public function saveQuickAction(){
+    public function saveTypeQuickAction(){
         $questionService = $this->sm->get("QuestionService");
         $request = $this->getRequest();
         $values = $request->getPost();
-        $questionService->saveQuestion($values);
+        $questionService->saveTypeQuickQuestion($values);
     }
 
+    public function saveTypeMultipleOptionsAction(){
+        $questionService = $this->sm->get("QuestionService");
+        $request = $this->getRequest();
+        $values = $request->getPost();
+        $questionService->saveTypeMultipleOptionsQuestion($values);
+    }
+
+    public function saveChoiceAction(){
+        $questionService = $this->sm->get("QuestionService");
+        $request = $this->getRequest();
+        $values = $request->getPost();
+        $questionService->saveTypeMultipleOptionsQuestion($values);
+    }
 
 }
