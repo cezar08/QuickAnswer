@@ -45,6 +45,16 @@ return [
                     ],
                 ],
             ],
+            'roomList' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/room[/:action]',
+                    'defaults' => [
+                        'controller' => Controller\RoomController::class,
+                        'action'     => 'listRoom',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [

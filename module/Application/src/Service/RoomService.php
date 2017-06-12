@@ -199,4 +199,16 @@ class RoomService
 
         return true;
     }
+
+    /**
+     * Função temporaria para trazer os dados
+     * @return array
+     */
+    public function listTemporary(){
+        $select = $this->entityManager->createQueryBuilder()
+            ->select('Room')
+            ->from('Entity\Room', 'Room');
+
+        return $select->getQuery()->getResult();
+    }
 }

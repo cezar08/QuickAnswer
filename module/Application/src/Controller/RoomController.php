@@ -33,7 +33,11 @@ class RoomController extends AbstractActionController
     {
     }
 
-    public function listarSalasAction()
+    public function listRoomAction()
     {
+        $rooms = $this->getService('RoomService')->listTemporary;
+
+        return $rooms;
     }
+
 }
