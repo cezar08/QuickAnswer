@@ -23,8 +23,8 @@ class MediaServiceTest extends AbstractServiceTestCase
         $serviceMedia = $this->getApplicationServiceLocator()
             ->get('MediaService');
 
-        $path = 'img/media/picture_001.jpeg';
-        $type = '1';
+        $path = 'img/media_repository/picture_001.jpeg';
+        $type = 'image';
         $store_media = $serviceMedia->persistMedia($type, $path);
 
         $this->assertArrayHasKey('success', $store_media);

@@ -8,11 +8,11 @@ use Application\Validator\MediaValidator;
 
 class MediaService
 {
-    protected $entityManger;
+    protected $entityManager;
 
     public function __construct(EntityManager $entityManager)
     {
-        $this->entityManger = $entityManager;
+        $this->entityManager = $entityManager;
     }
 
     /**
@@ -27,13 +27,14 @@ class MediaService
     public function persistMedia($media_type, $media_path)
     {
         try {
-            $media = new MediaService();
+            $media = new MediaEntity();
             $media->typeOfMedia = $media_type;
-            $media->dateOfMedia = strtotime((new \DateTime('now'))->format('Y-m-d H:i'));
+            $media->dateOfMedia = new \DateTime("now");
+
             $media->path = $media_path;
 
-            $this->entityManger->persist($media);
-            $this->entityManger->flush();
+            $this->entityManager->persist($media);
+            $this->entityManager->flush();
 
             return ['success' => 'Media stored successfully'];
         } catch (\Exception $e) {

@@ -48,11 +48,22 @@ return [
                     ],
                 ],
             ],
+            'media' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route' => '/media',
+                    'defaults' => [
+                        'controller' => Controller\MediaController::class,
+                        'action' => 'storeMedia',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
+            Controller\MediaController::class => InvokableFactory::class,
             Controller\ExemploFactoryController::class => function ($sm) {
 
                 return new ExemploFactoryController($sm);
