@@ -67,7 +67,7 @@ class RoomService
         $rooms = $this->searchRoom($data);
         $user = " "; //presumo que deva existir um metodo que busque um usuario e retorne um objeto
 
-        foreach ($room as $key => $rooms) {
+        foreach ($rooms as $key => $room) {
             if ($room.type == "privado" && $room.user != $user.id) {
                 unset($room);
             }
