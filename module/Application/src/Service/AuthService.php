@@ -60,7 +60,7 @@ class AuthService implements AuthServiceInterface
         session_start();
         if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['code'])){
 
-            // Informe o seu App ID abaixo
+            // Informe o seu App ID abaixoo
             $appId = '1685311895096964';
             $appSecret = '469938ae3d550cae19cf04483dc7d848';
             $redirectUri = urlencode('http://localhost:8080/authfacebook');

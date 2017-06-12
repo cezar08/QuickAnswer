@@ -34,7 +34,7 @@ class LoginController extends AbstractActionController
                 break;
 
 
-            case 3://gmail
+            case 3://gmaill
 
                 break;
         }

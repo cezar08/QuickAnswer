@@ -7,8 +7,12 @@
 
 namespace Application;
 
+use Application\Controller\ExemploFactoryController;
+use Application\Controller\UsersController;
 use Application\Service\AuthService;
+use Application\Service\FactoryService;
 use Zend\Router\Http\Literal;
+use Zend\Router\Http\Method;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
@@ -25,21 +29,111 @@ return [
                     ],
                 ],
             ],
-            'application' => [
-                'type' => Segment::class,
+            'acao1' => [
+              'type' => Literal::class,
                 'options' => [
-                    'route' => '/application[/:action]',
+                  'route' => '/acao1',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
-                        'action' => 'index',
-                    ],
+                        'action' => 'acao1'
+                    ]
                 ],
             ],
+            'login' => [
+                'type' => Segment::class,
+                'options' => [
+                    'route' => '/login/[:type]',
+                    'defaults' => [
+                        'controller' => Controller\LoginController::class,
+                        'action' => 'login',
+                    ]
+                ]
+            ],
+            'users_literal' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route' => '/users'
+                ],
+                'may_terminate' => false,
+                'child_routes' => [
+                    'get' => [
+                        'type' => Method::class,
+                        'options' => [
+                            'verb' => 'get',
+                            'defaults' => [
+                                'controller' => Controller\UsersController::class,
+                                'action' => 'fetchAll'
+                            ]
+                        ]
+                    ],
+                    'post' => [
+                        'type' => Method::class,
+                        'options' => [
+                            'verb' => 'post',
+                            'defaults' => [
+                                'controller' => Controller\UsersController::class,
+                                'action' => 'create'
+                            ],
+                        ]
+                    ],
+                ]
+            ],
+            'users_segment' => [
+              'type' => Segment::class,
+                'options' => [
+                    'route' => '/users/[:id]'
+                ],
+                'may_terminate' => false,
+                'child_routes' => [
+                    'put' => [
+                        'type' => Method::class,
+                        'options' => [
+                            'verb' => 'put',
+                            'defaults' => [
+                                'controller' => Controller\UsersController::class,
+                                'action' => 'update'
+                            ]
+                        ]
+                    ],
+                    'delete' => [
+                        'type' => Method::class,
+                        'options' => [
+                            'verb' => 'delete',
+                            'defaults' => [
+                                'controller' => Controller\UsersController::class,
+                                'action' => 'delete'
+                            ]
+                        ]
+                    ],
+                    'get' => [
+                        'type' => Method::class,
+                        'options' => [
+                            'verb' => 'get',
+                            'defaults' => [
+                                'controller' => Controller\UsersController::class,
+                                'action' => 'fetch'
+                            ]
+                        ]
+                    ]
+                ]
+            ],
+
         ],
     ],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
+            Controller\LoginController::class => InvokableFactory::class,
+            Controller\ExemploFactoryController::class => function($sm){
+                return new ExemploFactoryController($sm);
+            },
+            Controller\UsersController::class => function($sm) {
+                $server = $sm->get('ZF\OAuth2\Service\OAuth2Server');
+                $provider = $sm->get('ZF\OAuth2\Provider\UserId');
+
+                return new UsersController($server, $provider);
+            }
+
         ],
     ],
     'doctrine' => [
@@ -67,6 +161,12 @@ return [
 
             return new AuthService($entityManager);
           },
+          'FactoryService' => function($sm){
+            return new FactoryService();
+          }
+      ],
+      'aliases' => [
+        'ZF\OAuth2\Provider\UserId' => 'ZF\OAuth2\Provider\UserId\AuthenticationService'
       ]
     ],
     'view_manager' => [
@@ -84,5 +184,8 @@ return [
         'template_path_stack' => [
             __DIR__ . '/../view',
         ],
+        'strategies' => [
+            'ViewJsonStrategy'
+        ]
     ],
 ];
