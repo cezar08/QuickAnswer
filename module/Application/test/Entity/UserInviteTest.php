@@ -47,7 +47,7 @@ class UserInviteTest extends TestCase
     public function testNamesAttributes($arrayCopy)
     {
         $this->assertArrayHasKey('id', $arrayCopy);
-        $this->assertArrayHasKey('user', $arrayCopy);
+        $this->assertArrayHasKey('username', $arrayCopy);
         $this->assertArrayHasKey('room', $arrayCopy);
         $this->assertArrayHasKey('accepted', $arrayCopy);
     }

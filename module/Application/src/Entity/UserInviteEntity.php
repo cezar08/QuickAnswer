@@ -26,16 +26,22 @@ class UserInviteEntity extends Entity implements UserInviteEntityInterface
     /**
      * @ORM\Column(type= "integer")
      * @ORM\ManyToOne(targetEntity="UserEntity")
-     * @ORM\JoinColumn(name="user", referencedColumnName="id")
+     * @ORM\JoinTable(name="user_qa",
+     *     joinColumns={@ORM\JoinColumn(name="id",referencedColumnName="id")},
+     *     inverseJoinColumns={@ORM\JoinColumn(name="user", referencedColumnName="id")}
+     *)
      *
      * @var int
      */
-    protected $user;
+    protected $username;
 
     /**
      * @ORM\Column(type= "integer")
      * @ORM\ManyToOne(targetEntity="SalaEntity")
-     * @ORM\JoinColumn(name="room", referencedColumnName="id")
+     * @ORM\JoinTable(name="ROOM_qa",
+     *     joinColumns={@ORM\JoinColumn(name="id",referencedColumnName="id")},
+     *     inverseJoinColumns={@ORM\JoinColumn(name="ROOM", referencedColumnName="id")}
+     *)
      *
      * @var int
      */

@@ -4,54 +4,89 @@
  * @copyright Copyright (c) 2005-2016 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
-
 namespace Application;
-
+use Application\Service\UserInviteService;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
-
 return [
     'router' => [
         'routes' => [
             'home' => [
                 'type' => Literal::class,
                 'options' => [
-                    'route'    => '/',
+                    'route' => '/',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
-                        'action'     => 'index',
+                        'action' => 'index',
                     ],
                 ],
             ],
-            'application' => [
-                'type'    => Segment::class,
-                'options' => [
-                    'route'    => '/application[/:action]',
-                    'defaults' => [
-                        'controller' => Controller\IndexController::class,
-                        'action'     => 'index',
-                    ],
+            'acao1' => [
+                'type' => Literal::class,
+                    'options' => [
+                        'route' => '/acao1',
+                            'defaults' => [
+                                'controller' => Controller\IndexController::class,
+                                'action' => 'acao1'
+                            ]
                 ],
+            ],
+            'login' => [
+                'type' => Literal::class,
+                    'options' => [
+                        'route' => '/login',
+                        'defaults' => [
+                            'controller' => Controller\LoginController::class,
+                            'action' => 'login'
+                        ]
+                    ]
             ],
         ],
     ],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
+            Controller\LoginController::class => InvokableFactory::class,
         ],
+    ],
+    'doctrine' => [
+        'driver' => [
+            'driver' => [
+                //define um driver de notação para a pasta src/Entity
+                // (poderia ser varias pastas), e o nome do driver é 'driver'
+                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
+                'cache' => 'array',
+                'paths' => [
+                    __DIR__ . '/../src/Entity'
+                ]
+            ],
+            'orm_default' => [
+                'drivers' => [ //registra o 'driver' para qualquer entidade na namespace Application\Entity
+                    'Application\Entity' => 'driver'
+                ]
+            ]
+        ]
+    ],
+    'service_manager' => [
+        'factories' => [
+            'UserInviteService' => function ($sm) {
+                $entityManager = $sm->get('Doctrine\ORM\EntityManager');
+                return new UserInviteService($entityManager);
+            },
+        ]
     ],
     'view_manager' => [
         'display_not_found_reason' => true,
-        'display_exceptions'       => true,
-        'doctype'                  => 'HTML5',
-        'not_found_template'       => 'error/404',
-        'exception_template'       => 'error/index',
+        'display_exceptions' => true,
+        'doctype' => 'HTML5',
+        'not_found_template' => 'error/404',
+        'exception_template' => 'error/index',
         'template_map' => [
-            'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
+            'layout/layout' => __DIR__ . '/../view/layout/layout.phtml',
             'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
-            'error/404'               => __DIR__ . '/../view/error/404.phtml',
-            'error/index'             => __DIR__ . '/../view/error/index.phtml',
+            'error/404' => __DIR__ . '/../view/error/404.phtml',
+            'error/index' => __DIR__ . '/../view/error/index.phtml',
         ],
         'template_path_stack' => [
             __DIR__ . '/../view',

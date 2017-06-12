@@ -29,7 +29,7 @@ class UserInviteValidator extends InputFilter
         $this->add(
             $factory->createInput(
                 [
-                    'name' => 'user',
+                    'name' => 'username',
                     'required' => true,
                     'filters' =>
                         [
