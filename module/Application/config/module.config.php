@@ -7,7 +7,7 @@
 
 namespace Application;
 
-use Service\SalaService;
+use Service\RoomService;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -35,12 +35,12 @@ return [
                     ],
                 ],
             ],
-            'sala' => [
+            'room' => [
                 'type'    => Segment::class,
                 'options' => [
-                    'route'    => '/sala[/:action]',
+                    'route'    => '/room[/:action]',
                     'defaults' => [
-                        'controller' => Controller\SalaController::class,
+                        'controller' => Controller\RoomController::class,
                         'action'     => 'index',
                     ],
                 ],
@@ -50,7 +50,7 @@ return [
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
-            Controller\SalaController::class => InvokableFactory::class,
+            Controller\RoomController::class => InvokableFactory::class,
 
         ],
     ],
@@ -78,10 +78,10 @@ return [
                 $entityManager = $sm->get('Doctrine\ORM\EntityManager');
                 return new AuthService($entityManager);
             },
-            'SalaService' => function ($sm) {
+            'RoomService' => function ($sm) {
                 $entityManager = $sm->get('Doctrine\ORM\EntityManager');
 
-                return new SalaService($entityManager);
+                return new RoomService($entityManager);
             }
         ]
     ],
