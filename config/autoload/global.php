@@ -6,9 +6,9 @@ return [
                 'driverClass' => 'Doctrine\DBAL\Driver\PDOPgSql\Driver',
                     'params' => [
                         'host' => '127.0.0.1',
-                        'port' => '3306',
+                        'port' => '5432',
                         'user' => 'postgres',
-                        'password' => 'root',
+                        'password' => 'postgres',
                         'dbname' => 'db_qa_test'
                     ]
                 ]

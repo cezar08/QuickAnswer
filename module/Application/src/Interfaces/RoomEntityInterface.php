@@ -1,7 +1,7 @@
 <?php
-namespace Zend\Mvc;
+namespace Application\Interfaces;
 
-interface SalaInterface
+interface RoomEntityInterface
 {
     // Método para buscar uma sala
     public function searchRoom();

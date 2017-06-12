@@ -6,7 +6,9 @@
 
 namespace Application\Entity;
 
+use Application\Interfaces\RoomEntityInterface;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Class UserEntity
@@ -48,9 +50,13 @@ class RoomEntity extends Entity
     protected $type;
 
     /**
-     * @ORM\Column(type="string", length=100, nullable=false)
+     * @ORM\ManyToMany(targetEntity="UserEntity")
+     * @ORM\JoinTable(name="user_qa",
+     *     joinColumns={@ORM\JoinColumn(name="id",referencedColumnName="id")},
+     *     inverseJoinColumns={@ORM\JoinColumn(name="user", referencedColumnName="id")}
+     * )
      *
-     * @var string
+     * @var ArrayCollection
      */
     protected $user;
 
@@ -60,4 +66,9 @@ class RoomEntity extends Entity
      * @var string
      */
     protected $question;
+
+    public function __construct()
+    {
+        $this->user = new ArrayCollection();
+    }
 }
