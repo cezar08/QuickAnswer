@@ -2,6 +2,7 @@
 
 namespace Application\Entity;
 
+use Application\Interfaces\TypeQuestion;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -12,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="MultipleOptions")
  */
-class TypeMutipleOptionsEntity
+class TypeMutipleOptionsEntity implements TypeQuestion
 {
     /**
      * @ORM\Id

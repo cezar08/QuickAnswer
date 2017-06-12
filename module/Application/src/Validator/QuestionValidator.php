@@ -55,7 +55,7 @@ class QuestionValidator extends InputFilter
                          [
                              'name' => 'IsInstanceOf',
                              'options' => [
-                                 'className' => 'Application\Entity\TypeQuestion'
+                                 'className' => 'Application\Interfaces\TypeQuestion'
                              ]
                          ]
                      ]

@@ -1,7 +1,9 @@
 <?php
 namespace Application\Entity;
 
-class TypeQuickAnswer
+use Application\Interfaces\TypeQuestion;
+
+class TypeQuickAnswer implements TypeQuestion
 {
     protected $id;
 

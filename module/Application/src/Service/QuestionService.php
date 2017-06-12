@@ -43,7 +43,8 @@ class QuestionService extends AbstractService
         $em->flush();
     }
 
-    private function setChoices($typeQuestion, $choices){
+    private function setChoices($typeQuestion, $choices)
+    {
         foreach ($choices as $choice) {
             $newChoice = new ChoiceEntity();
             $newChoice->__set("description", $choice['description']);
