@@ -68,7 +68,7 @@ class RoomService
         $user = " "; //presumo que deva existir um metodo que busque um usuario e retorne um objeto
 
         foreach ($rooms as $key => $room) {
-            if ($room.type == "privado" && $room.user != $user.id) {
+            if ($room->type == "privado" && $room->user != $user->id) {
                 unset($room);
             }
         }
