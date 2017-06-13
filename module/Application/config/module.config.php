@@ -7,7 +7,9 @@
 
 namespace Application;
 
-use Service\RoomService;
+use Application\Controller\RoomController;
+
+use Application\Service\RoomService;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -60,7 +62,10 @@ return [
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
-            Controller\RoomController::class => InvokableFactory::class,
+            Controller\RoomController::class => function($sm){
+                return new RoomController($sm);
+
+            },
 
         ],
     ],

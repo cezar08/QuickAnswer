@@ -8,8 +8,15 @@ namespace Application\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
-class RoomController extends AbstractActionController
+class RoomController extends ActionController
 {
+    protected $sm;
+
+    public function __construct($sm)
+    {
+        $this->sm = $sm;
+    }
+
     public function indexAction()
     {
         $rooms = ['Room 1', 'Room 2', 'Room 3']; //executa o serviço q vai no banco e pega as salas
@@ -35,7 +42,9 @@ class RoomController extends AbstractActionController
 
     public function listRoomAction()
     {
-        $rooms = $this->getService('RoomService')->listTemporary;
+        $roomService = $this->getServiceLocator("RoomService");
+
+        $rooms = $roomService->listTemporary();
 
         return $rooms;
     }

@@ -2,10 +2,10 @@
 /**
  * @author Jean/Marcos
  */
-namespace Service;
+namespace Application\Service;
 
-use Application\Entity\SalaEntity;
-use Application\Validator\SalaValidator;
+use Application\Entity\RoomEntity;
+use Application\Validator\RoomValidator;
 use Doctrine\ORM\EntityManager;
 
 class RoomService
@@ -205,10 +205,15 @@ class RoomService
      * @return array
      */
     public function listTemporary(){
-        $select = $this->entityManager->createQueryBuilder()
-            ->select('Room')
-            ->from('Entity\Room', 'Room');
+//        $select = $this->entityManager->createQueryBuilder()
+//            ->select('Room')
+//            ->from('Entity\RoomEntity', 'Room');
 
-        return $select->getQuery()->getResult();
+        $dados = $this->entityManager->getRepository(
+            '\Application\Entity\RoomEntity'
+        )->findAll();
+
+        return $dados;
+//        return $select->getQuery()->getResult();
     }
 }
