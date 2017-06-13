@@ -6,6 +6,7 @@ use Application\Interfaces\AuthServiceInterface;
 use Doctrine\ORM\EntityManager;
 use Zend\Validator\EmailAddress;
 use Zend\Validator\StringLength;
+use Application\Entity\UserEntityInterface;
 
 class AuthService implements AuthServiceInterface
 {
@@ -123,7 +124,7 @@ class AuthService implements AuthServiceInterface
          */
         $clientId = ' 286769268840-a4i9mkqkq25mtcs49plckbnv37la7jdr.apps.googleusercontent.com';
         $clientSecret = ' hMMzNSOMfyzaTPh9NzJ4CJD3';
-        $redirectURL = 'http://localhost:8080/login/3/';
+        $redirectURL = 'http://localhost:8080/login';
 
         //Call Google API
         $gClient = new Google_Client();
@@ -133,5 +134,38 @@ class AuthService implements AuthServiceInterface
         $gClient->setRedirectUri($redirectURL);
 
         $google_oauthV2 = new Google_Oauth2Service($gClient);
+
+        if ($gClient->getAccessToken()) {
+            //Get user profile data from google
+            $gpUserProfile = $google_oauthV2->userinfo->get();
+
+            //Initialize User class
+            $user = new User();
+
+            //Insert or update user data to the database
+            $gpUserData = array(
+                'oauth_provider'=> 'google',
+                'oauth_uid'     => $gpUserProfile['id'],
+                'first_name'    => $gpUserProfile['given_name'],
+                'last_name'     => $gpUserProfile['family_name'],
+                'email'         => $gpUserProfile['email'],
+                'link'          => $gpUserProfile['link']
+            );
+            $userData = $user->checkUser($gpUserData);
+
+            //Storing user data into session
+            $_SESSION['userData'] = $userData;
+
+            //Render facebook profile data
+            if(!empty($userData)){
+                $output = '<h1>Google+ Profile Details </h1>';
+                $output .= '<br/>Google ID : ' . $userData['oauth_uid'];
+                $output .= '<br/>Name : ' . $userData['first_name'].' '.$userData['last_name'];
+                $output .= '<br/>Email : ' . $userData['email'];
+                $output .= '<br/>Logged in with : Google';
+                $output .= '<br/><a href="'.$userData['link'].'" target="_blank">Click to Visit Google+ Page</a>';
+            }else{
+                $output = '<h3 style="color:red">Some problem occurred, please try again.</h3>';
+            }
     }
 }

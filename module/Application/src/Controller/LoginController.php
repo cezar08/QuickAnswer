@@ -23,18 +23,18 @@ class LoginController extends AbstractActionController
 
         switch ($type){
 
-
             case 1: //banco de dados
 
                 break;
-
 
             case 2: //facebook
 
                 break;
 
+            case 3: //gmail
+                $data = $this->getRequest()->getPost();
 
-            case 3://gmaill
+                $this->getServiceLocator('AuthService')->gmailAuth($data);
 
                 break;
         }
