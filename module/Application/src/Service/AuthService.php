@@ -127,7 +127,7 @@ class AuthService implements AuthServiceInterface
 
         //Call Google API
         $gClient = new Google_Client();
-        $gClient->setApplicationName('Login to CodexWorld.com');
+        $gClient->setApplicationName('Login to AGILM.com');
         $gClient->setClientId($clientId);
         $gClient->setClientSecret($clientSecret);
         $gClient->setRedirectUri($redirectURL);
