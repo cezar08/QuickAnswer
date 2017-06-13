@@ -65,7 +65,7 @@ class UserInviteServiceTest extends AbstractServiceTestCase
     /**
      * Teste que verifica um usuário não convidado
      */
-    public function testVaiSeFode()
+    public function testInvalidInvite()
     {
         $serviceInvite = $this->getApplicationServiceLocator()
             ->get('UserInviteService');
