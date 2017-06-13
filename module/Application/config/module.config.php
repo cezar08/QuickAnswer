@@ -12,6 +12,7 @@ use Application\Service\AuthService;
 use Application\Service\MediaService;
 use Application\Service\FactoryService;
 use Zend\Router\Http\Literal;
+use Zend\Router\Http\Method;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
@@ -51,12 +52,21 @@ return [
             'media' => [
                 'type' => Literal::class,
                 'options' => [
-                    'route' => '/media',
-                    'defaults' => [
-                        'controller' => Controller\MediaController::class,
-                        'action' => 'storeMedia',
-                    ],
+                    'route' => '/media'
                 ],
+                'may_terminate' => false,
+                'child_routes' => [
+                    'get' => [
+                        'type' => Method::class,
+                        'options' => [
+                            'verb' => 'get',
+                            'defaults' => [
+                                'controller' => Controller\MediaController::class,
+                                'action' => 'storeMedia'
+                            ]
+                        ]
+                    ],
+                ]
             ],
         ],
     ],
