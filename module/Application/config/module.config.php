@@ -42,7 +42,36 @@ return [
             Controller\IndexController::class => InvokableFactory::class,
         ],
     ],
-
+    'saveTypeQuick' => [
+              'type' => Literal::class,
+                'options' => [
+                  'route' => '/saveTypeQuick',
+                    'defaults' => [
+                        'controller' => Controller\QuestionController::class,
+                        'action' => 'saveTypeQuick'
+                    ]
+                ],
+      ],
+    'saveTypeMultipleOptions' => [
+        'type' => Literal::class,
+        'options' => [
+            'route' => '/saveTypeMultipleOptions',
+            'defaults' => [
+                'controller' => Controller\QuestionController::class,
+                'action' => 'saveTypeMultipleOptions'
+            ]
+        ],
+    ],
+    'saveChoice' => [
+        'type' => Literal::class,
+        'options' => [
+            'route' => '/saveChoice',
+            'defaults' => [
+                'controller' => Controller\QuestionController::class,
+                'action' => 'saveChoice'
+            ]
+        ],
+    ],
 
     'doctrine' => [
         'driver' => [

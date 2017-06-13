@@ -40,7 +40,7 @@ class ChoiceService{
         $em->persist($choice);
         $em->flush();
     }
-    }
+
 
 }
 ?>
