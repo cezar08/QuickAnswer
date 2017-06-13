@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="89d20f09-f494-468f-ae3b-cc8db7113382" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Application/config/module.config.php" afterPath="$PROJECT_DIR$/module/Application/config/module.config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Application/src/Entity/UserInviteEntity.php" afterPath="$PROJECT_DIR$/module/Application/src/Entity/UserInviteEntity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Application/src/Service/UserInviteService.php" afterPath="$PROJECT_DIR$/module/Application/src/Service/UserInviteService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Application/src/Validator/UserValidator.php" afterPath="$PROJECT_DIR$/module/Application/src/Validator/UserValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Application/test/Entity/UserInviteTest.php" afterPath="$PROJECT_DIR$/module/Application/test/Entity/UserInviteTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Application/test/Service/UserInviteServiceTest.php" afterPath="$PROJECT_DIR$/module/Application/test/Service/UserInviteServiceTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -114,12 +108,13 @@
         <option value="$PROJECT_DIR$/module/Application/src/Interfaces/UserEntityInterface.php" />
         <option value="$PROJECT_DIR$/module/Application/config/module.config.php" />
         <option value="$PROJECT_DIR$/module/Application/src/Service/HashService.php" />
-        <option value="$PROJECT_DIR$/module/Application/test/Service/HashServiceTest.php" />
         <option value="$PROJECT_DIR$/module/Application/src/Service/UserInviteService.php" />
         <option value="$PROJECT_DIR$/module/Application/test/Service/UserInviteServiceTest.php" />
         <option value="$PROJECT_DIR$/module/Application/src/Entity/UserInviteEntity.php" />
         <option value="$PROJECT_DIR$/module/Application/src/Validator/UserValidator.php" />
         <option value="$PROJECT_DIR$/module/Application/test/Entity/UserInviteTest.php" />
+        <option value="$PROJECT_DIR$/module/Application/test/Service/HahServiceTest.php" />
+        <option value="$PROJECT_DIR$/module/Application/test/Service/HashServiceTest.php" />
       </list>
     </option>
   </component>
@@ -412,6 +407,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
+    <property name="nodejs_interpreter_path" value="/usr/bin/node" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -492,7 +489,7 @@
       <workItem from="1490739352303" duration="177000" />
       <workItem from="1491258237389" duration="1955000" />
       <workItem from="1491262318703" duration="322000" />
-      <workItem from="1497311711715" duration="1533000" />
+      <workItem from="1497311711715" duration="1936000" />
     </task>
     <task id="LOCAL-00001" summary="Factories do HashService">
       <created>1497312303319</created>
@@ -505,7 +502,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13606000" />
+    <option name="totallyTimeSpent" value="14009000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -895,14 +892,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Application/test/Service/HashServiceTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/Application/src/Service/HashService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -934,6 +923,22 @@
           <folding>
             <element signature="e#41#74#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Application/test/Service/HahServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Application/test/Service/HashServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
