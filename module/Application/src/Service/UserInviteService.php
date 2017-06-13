@@ -29,6 +29,5 @@ class UserInviteService
             } else if (!$invite->accepted) {
                 return ['userNotHasInvite' => 'Usuario Não Convidado'];
             }
-
     }
 }

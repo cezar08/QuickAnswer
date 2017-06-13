@@ -52,3 +52,4 @@ class UserInviteTest extends TestCase
         $this->assertArrayHasKey('accepted', $arrayCopy);
     }
 }
+

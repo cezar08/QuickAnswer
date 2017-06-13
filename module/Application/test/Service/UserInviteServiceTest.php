@@ -44,7 +44,6 @@ class UserInviteServiceTest extends AbstractServiceTestCase
     {
         $serviceInvite = $this->getApplicationServiceLocator()
             ->get('UserInviteService');
-
         $user_invite = new UserInviteEntity();
         $user_invite->id = 1;
         $user_invite->username = $this->validData['username'];
@@ -69,7 +68,6 @@ class UserInviteServiceTest extends AbstractServiceTestCase
     {
         $serviceInvite = $this->getApplicationServiceLocator()
             ->get('UserInviteService');
-
         $user_invite = new UserInviteEntity();
         $user_invite->username = $this->invalidData['username'];
         $user_invite->room = $this->invalidData['room'];

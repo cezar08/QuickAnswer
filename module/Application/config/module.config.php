@@ -6,6 +6,7 @@
  */
 namespace Application;
 use Application\Service\UserInviteService;
+use Application\Service\HashService;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -73,6 +74,10 @@ return [
             'UserInviteService' => function ($sm) {
                 $entityManager = $sm->get('Doctrine\ORM\EntityManager');
                 return new UserInviteService($entityManager);
+            },
+            'HashService' => function ($sm) {
+                $entityManager = $sm->get('Doctrine\ORM\EntityManager');
+                return new HashService($entityManager);
             },
         ]
     ],

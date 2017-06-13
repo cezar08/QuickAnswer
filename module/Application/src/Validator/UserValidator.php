@@ -133,3 +133,4 @@ class UserValidator extends InputFilter
         );
     }
 }
+

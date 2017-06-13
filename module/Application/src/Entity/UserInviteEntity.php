@@ -54,3 +54,4 @@ class UserInviteEntity extends Entity implements UserInviteEntityInterface
      */
     protected $accepted;
 }
+
