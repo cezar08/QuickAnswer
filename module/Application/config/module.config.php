@@ -25,51 +25,52 @@ return [
                     ],
                 ],
             ],
-            'application' => [
-                'type' => Segment::class,
-                'options' => [
-                    'route' => '/application[/:action]',
-                    'defaults' => [
-                        'controller' => Controller\IndexController::class,
-                        'action' => 'index',
-                    ],
+        'application' => [
+            'type' => Segment::class,
+            'options' => [
+                'route' => '/application[/:action]',
+                'defaults' => [
+                    'controller' => Controller\IndexController::class,
+                    'action' => 'index',
                 ],
             ],
+        ],
+        'saveTypeQuick' => [
+            'type' => Literal::class,
+            'options' => [
+                    'route' => '/saveTypeQuick',
+                    'defaults' => [
+                        'controller' => Controller\QuestionController::class,
+                        'action' => 'saveTypeQuick'
+                ]
+            ],
+        ],
+        'saveTypeMultipleOptions' => [
+            'type' => Literal::class,
+            'options' => [
+                'route' => '/saveTypeMultipleOptions',
+                'defaults' => [
+                    'controller' => Controller\QuestionController::class,
+                    'action' => 'saveTypeMultipleOptions'
+                ]
+            ],
+        ],
+        'saveChoice' => [
+            'type' => Literal::class,
+            'options' => [
+                'route' => '/saveChoice',
+                'defaults' => [
+                    'controller' => Controller\QuestionController::class,
+                    'action' => 'saveChoice'
+                ]
+            ],
+        ],
+
         ],
     ],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
-        ],
-    ],
-    'saveTypeQuick' => [
-              'type' => Literal::class,
-                'options' => [
-                  'route' => '/saveTypeQuick',
-                    'defaults' => [
-                        'controller' => Controller\QuestionController::class,
-                        'action' => 'saveTypeQuick'
-                    ]
-                ],
-      ],
-    'saveTypeMultipleOptions' => [
-        'type' => Literal::class,
-        'options' => [
-            'route' => '/saveTypeMultipleOptions',
-            'defaults' => [
-                'controller' => Controller\QuestionController::class,
-                'action' => 'saveTypeMultipleOptions'
-            ]
-        ],
-    ],
-    'saveChoice' => [
-        'type' => Literal::class,
-        'options' => [
-            'route' => '/saveChoice',
-            'defaults' => [
-                'controller' => Controller\QuestionController::class,
-                'action' => 'saveChoice'
-            ]
         ],
     ],
 
