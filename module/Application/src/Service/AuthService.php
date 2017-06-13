@@ -121,9 +121,9 @@ class AuthService implements AuthServiceInterface
         /*
          * Configuration and setup Google API
          */
-        $clientId = 'InsertGoogleClientID';
-        $clientSecret = 'InsertGoogleClientSecret';
-        $redirectURL = 'http://localhost/login_with_google_using_php/';
+        $clientId = ' 286769268840-a4i9mkqkq25mtcs49plckbnv37la7jdr.apps.googleusercontent.com';
+        $clientSecret = ' hMMzNSOMfyzaTPh9NzJ4CJD3';
+        $redirectURL = 'http://localhost:8080/login/3/';
 
         //Call Google API
         $gClient = new Google_Client();
