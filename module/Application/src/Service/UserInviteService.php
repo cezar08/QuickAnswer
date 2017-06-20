@@ -24,10 +24,11 @@ class UserInviteService
                 'username' => $user['id']
             ]
         );
-            if ($invite->accepted) {
-                return ['userHasInvite' => 'Usuario Convidado'];
-            } else if (!$invite->accepted) {
-                return ['userNotHasInvite' => 'Usuario Não Convidado'];
-            }
+
+        if ($invite->accepted) {
+            return ['userHasInvite' => 'Usuario Convidado'];
+        } elseif (!$invite->accepted) {
+            return ['userNotHasInvite' => 'Usuario Não Convidado'];
+        }
     }
 }
