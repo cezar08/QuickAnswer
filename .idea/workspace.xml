@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89d20f09-f494-468f-ae3b-cc8db7113382" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Application/src/Service/HashService.php" afterPath="$PROJECT_DIR$/module/Application/src/Service/HashService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Application/src/Service/UserInviteService.php" afterPath="$PROJECT_DIR$/module/Application/src/Service/UserInviteService.php" />
-    </list>
+    <list default="true" id="89d20f09-f494-468f-ae3b-cc8db7113382" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -315,7 +311,7 @@
       <workItem from="1497311711715" duration="2058000" />
       <workItem from="1497314103553" duration="700000" />
       <workItem from="1497913457675" duration="555000" />
-      <workItem from="1497915661230" duration="1739000" />
+      <workItem from="1497915661230" duration="1892000" />
     </task>
     <task id="LOCAL-00001" summary="Factories do HashService">
       <created>1497312303319</created>
@@ -328,7 +324,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17125000" />
+    <option name="totallyTimeSpent" value="17278000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
