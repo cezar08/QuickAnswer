@@ -7,11 +7,8 @@
 
 namespace Application;
 
-use Application\Controller\ExemploFactoryController;
 use Application\Controller\LoginController;
-use Application\Controller\UsersController;
 use Application\Service\AuthService;
-use Application\Service\FactoryService;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Method;
 use Zend\Router\Http\Segment;
@@ -30,61 +27,30 @@ return [
                     ],
                 ],
             ],
-            'acao1' => [
-              'type' => Literal::class,
+            'application' => [
+                'type' => Segment::class,
                 'options' => [
-                  'route' => '/acao1',
+                    'route' => '/application[/:action]',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
-                        'action' => 'acao1'
-                    ]
+                        'action' => 'index',
+                    ],
+                ],
+            ],
+            'login_literal' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route' => '/login',
+                    'defaults' => [
+                        'controller' => Controller\LoginController::class,
+                        'action' => 'index',
+                    ],
                 ],
             ],
             'login' => [
                 'type' => Segment::class,
                 'options' => [
-                    'route' => '/login/[:type]',
-                    'defaults' => [
-                        'controller' => Controller\LoginController::class,
-                        'action' => 'login',
-                    ]
-                ]
-            ],
-            'users_literal' => [
-                'type' => Literal::class,
-                'options' => [
-                    'route' => '/users'
-                ],
-                'may_terminate' => false,
-                'child_routes' => [
-                    'get' => [
-                        'type' => Method::class,
-                        'options' => [
-                            'verb' => 'get',
-                            'defaults' => [
-                                'controller' => Controller\UsersController::class,
-                                'action' => 'fetchAll'
-                            ]
-                        ]
-                    ],
-                    'post' => [
-                        'type' => Method::class,
-                        'options' => [
-                            'verb' => 'post',
-                            'defaults' => [
-                                'controller' => Controller\UsersController::class,
-                                'action' => 'create'
-                            ],
-                        ]
-                    ],
-                ]
-            ],
-
-
-            /*'login' => [
-                'type' => Literal::class,
-                'options' => [
-                    'route' => '/login-factory'
+                    'route' => '/login-type[/:type]'
                 ],
                 'may_terminate' => false,
                 'child_routes' => [
@@ -93,54 +59,13 @@ return [
                         'options' => [
                             'verb' => 'post',
                             'defaults' => [
-                                'controller' => Controller\LoginFactoryController::class,
-                                'action' => 'index'
+                                    'controller' => Controller\LoginController::class,
+                                    'action' => 'auth'
                             ],
                         ]
                     ],
                 ]
-            ],*/
-
-            'users_segment' => [
-              'type' => Segment::class,
-                'options' => [
-                    'route' => '/users/[:id]'
-                ],
-                'may_terminate' => false,
-                'child_routes' => [
-                    'put' => [
-                        'type' => Method::class,
-                        'options' => [
-                            'verb' => 'put',
-                            'defaults' => [
-                                'controller' => Controller\UsersController::class,
-                                'action' => 'update'
-                            ]
-                        ]
-                    ],
-                    'delete' => [
-                        'type' => Method::class,
-                        'options' => [
-                            'verb' => 'delete',
-                            'defaults' => [
-                                'controller' => Controller\UsersController::class,
-                                'action' => 'delete'
-                            ]
-                        ]
-                    ],
-                    'get' => [
-                        'type' => Method::class,
-                        'options' => [
-                            'verb' => 'get',
-                            'defaults' => [
-                                'controller' => Controller\UsersController::class,
-                                'action' => 'fetch'
-                            ]
-                        ]
-                    ]
-                ]
             ],
-
         ],
     ],
     'controllers' => [
@@ -161,38 +86,38 @@ return [
 
         ],
     ],
+
+
     'doctrine' => [
         'driver' => [
             'driver' => [
-                //define um driver de notação para a pasta src/Entity
-                // (poderia ser varias pastas), e o nome do driver é 'driver'
                 'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
                 'cache' => 'array',
                 'paths' => [
-                    __DIR__ . '/../src/Entity'
-                ]
+                    __DIR__.'/../src/Entity'
+                ],
             ],
             'orm_default' => [
-                'drivers' => [ //registra o 'driver' para qualquer entidade na namespace Application\Entity
+                'drivers' => [
                     'Application\Entity' => 'driver'
                 ]
             ]
         ]
     ],
     'service_manager' => [
-      'factories' => [
-          'AuthService' => function ($sm) {
-            $entityManager = $sm->get('Doctrine\ORM\EntityManager');
+        'factories' => [
+            'AuthService' => function ($sm) {
+                $entityManager = $sm->get('Doctrine\ORM\EntityManager');
 
-            return new AuthService($entityManager);
-          },
-          'FactoryService' => function($sm){
-            return new FactoryService();
-          }
-      ],
-      'aliases' => [
-        'ZF\OAuth2\Provider\UserId' => 'ZF\OAuth2\Provider\UserId\AuthenticationService'
-      ]
+                return new AuthService($entityManager);
+            },
+            'FactoryService' => function($sm){
+                return new FactoryService();
+            }
+        ],
+        'aliases' => [
+            'ZF\OAuth2\Provider\UserId' => 'ZF\OAuth2\Provider\UserId\AuthenticationService'
+        ]
     ],
     'view_manager' => [
         'display_not_found_reason' => true,
@@ -211,6 +136,6 @@ return [
         ],
         'strategies' => [
             'ViewJsonStrategy'
-        ]
+        ],
     ],
 ];

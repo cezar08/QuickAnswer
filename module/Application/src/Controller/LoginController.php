@@ -1,48 +1,63 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: unochapeco
- * Date: 15/05/17
- * Time: 20:05
+ * User: cezarjuniordesouza
+ * Date: 16/06/17
+ * Time: 18:20
  */
 
 namespace Application\Controller;
 
 
 use Zend\Mvc\Controller\AbstractActionController;
+use Zend\View\Model\JsonModel;
 use Zend\View\Model\ViewModel;
 
 class LoginController extends ActionController
 {
 
-    public function loginAction()
+    public function indexAction()
     {
+        return new ViewModel();
+    }
 
-        $type = $this->params()->fromRoute("type", 0);
-        // 0 e o erro 0 nao foi certo algo assim
+    public function authAction()
+    {
+        $request = $this->getRequest();
+        $data = $request->getPost();
+        $type = $this->params()->fromRoute('type', 0);
 
-        switch ($type){
+        switch ($type) {
+            case 1:
+                //chama serviço autenticação facebook
+                break;
+            case 2:
 
-
-            case 1: //banco de dados
-
+                //chama serviço autenticação banco
                 break;
 
 
-            case 2: //facebook
+            case 3:
+                //chama serviço com o método autentição Gmail, esse serviço vocês devem verificar se
+                //o usuário já existe na base de dados, utilizando o e-mail e o userId por questões de segurança,
+                // se não existir vocês devem criá-lo
+                //e no retorno abaixo colocar o usuário completo salvo no banco em formato de array
+                //
                 $data = $this->getRequest()->getPost();
+                $gmail = $this->getServiceLocator('AuthService')->gmailAuth($data);
 
-                $this->getServiceLocator('AuthService')->facebookAuth($data);
-
+                return new JsonModel([
+                    'succes'=> [
+                        'userId' => $data['userId'],
+                        'email' => $data['userMail'],
+                        'userPicture' => $data['userPicture']
+                    ]
+                ]);
                 break;
-
-
-            case 3://gmaill
-
-                break;
+            default:
+                return new JsonModel(['error' => 'Forma de autenticação inválida']);
         }
 
-        return new ViewModel();
     }
 
 }

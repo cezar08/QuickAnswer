@@ -51,7 +51,43 @@ class UserValidator extends InputFilter
             $factory->createInput(
                 [
                     'name' => 'password',
-                    'required' => true,
+                    'required' => false,
+                    'validators' => [
+                        [
+                            'name' => 'StringLength',
+                            'options' => [
+                                'encoding' => 'UTF-8',
+                                'min' => 6,
+                                'max' => 60
+                            ]
+                        ]
+                    ]
+                ]
+            )
+        );
+        $this->add(
+            $factory->createInput(
+                [
+                    'name' => 'facebookId',
+                    'required' => false,
+                    'validators' => [
+                        [
+                            'name' => 'StringLength',
+                            'options' => [
+                                'encoding' => 'UTF-8',
+                                'min' => 6,
+                                'max' => 60
+                            ]
+                        ]
+                    ]
+                ]
+            )
+        );
+        $this->add(
+            $factory->createInput(
+                [
+                    'name' => 'gmailId',
+                    'required' => false,
                     'validators' => [
                         [
                             'name' => 'StringLength',

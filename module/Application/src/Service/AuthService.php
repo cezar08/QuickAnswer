@@ -2,6 +2,7 @@
 
 namespace Application\Service;
 
+use Application\Entity\UserEntity;
 use Application\Interfaces\AuthServiceInterface;
 use Doctrine\ORM\EntityManager;
 use Zend\Validator\EmailAddress;
@@ -64,6 +65,18 @@ class AuthService implements AuthServiceInterface
 
     public function gmailAuth($data)
     {
+//        var_dump($data);exit;
+        $user = new UserEntity();
+        $user->email = $data['userEmail'];
+        $user->gmailId = $data['userId'];
+        $user->name = $data['userName'];
+        $user->typeAuth = '3';
+        var_dump($user);
+        $entityManager = $this->entityManger;
+        $entityManager->persist($user);
+        $entityManager->flush();
+
+        return $entityManager;
         /*
          * FUNÇÃO QUE SERÁ IMPLEMENTADA FUTURAMENTE
          */

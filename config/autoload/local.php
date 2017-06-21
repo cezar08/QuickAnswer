@@ -9,7 +9,7 @@ return [
                     'host' => 'localhost',
                     'port' => '5432',
                     'user' => 'postgres',
-                    'password' => 'postgres',
+                    'password' => 'root',
                     'dbname' => 'db_qa'
                 ]
             ],

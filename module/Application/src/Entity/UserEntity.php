@@ -40,12 +40,25 @@ class UserEntity extends Entity implements UserEntityInterface
     protected $email;
 
     /**
-     * @ORM\Column(type="string", length=64, nullable=false)
+     * @ORM\Column(type="string", length=64, nullable=true)
      *
      * @var string
      */
     protected $password;
 
+    /**
+     * @ORM\Column(type="string", length=64, nullable=true)
+     *
+     * @var string
+     */
+    protected $gmailId;
+
+    /**
+     * @ORM\Column(type="string", length=64, nullable=true)
+     *
+     * @var string
+     */
+    protected $facebookId;
     /**
      * @ORM\Column(type="integer", nullable=false)
      *
