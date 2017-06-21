@@ -34,6 +34,27 @@ class LoginController extends ActionController
             case 2:
 
                 //chama serviço autenticação banco
+
+                $data = $this->getRequest()->getPost();
+
+                try {
+                    $this->getServiceLocator('AuthService')->facebookAuth($data);
+                    return new JsonModel([
+                        'succes'=> [
+                            'userId' => $data['id'],
+                            'email' => $data['email'],
+                            'userPicture' => $data['picture']
+                        ]
+                    ]);
+
+                } catch (Exception $e) {
+                    return new JsonModel([
+                        'error'=> [
+                            'erro' => $e
+                        ]
+                    ]);
+                }
+
                 break;
 
 

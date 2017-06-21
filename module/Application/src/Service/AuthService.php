@@ -77,8 +77,6 @@ class AuthService implements AuthServiceInterface
         $entityManager->flush();
 
         return $entityManager;
-        /*
-         * FUNÇÃO QUE SERÁ IMPLEMENTADA FUTURAMENTE
-         */
+       
     }
 }
