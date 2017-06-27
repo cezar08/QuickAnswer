@@ -67,13 +67,7 @@ class LoginController extends ActionController
                 $data = $this->getRequest()->getPost();
                 $gmail = $this->getServiceLocator('AuthService')->gmailAuth($data);
 
-                return new JsonModel([
-                    'succes'=> [
-                        'userId' => $data['userId'],
-                        'email' => $data['userMail'],
-                        'userPicture' => $data['userPicture']
-                    ]
-                ]);
+                return new JsonModel($data);
                 break;
             default:
                 return new JsonModel(['error' => 'Forma de autenticação inválida']);

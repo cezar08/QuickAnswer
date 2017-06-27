@@ -65,18 +65,24 @@ class AuthService implements AuthServiceInterface
 
     public function gmailAuth($data)
     {
-//        var_dump($data);exit;
-        $user = new UserEntity();
-        $user->email = $data['userEmail'];
-        $user->gmailId = $data['userId'];
-        $user->name = $data['userName'];
-        $user->typeAuth = '3';
-        var_dump($user);
-        $entityManager = $this->entityManger;
-        $entityManager->persist($user);
-        $entityManager->flush();
 
-        return $entityManager;
+      $user = $this->entityManger->getRepository('Application\Entity\UserEntity')
+          ->findOneBy(['email' => $data['userEmail'], 'gmailId' => $data['gmailId']]);
+
+      if (!$user) {
+          $user = new UserEntity();
+
+          $user->email = $data['userEmail'];
+          $user->gmailId = $data['userId'];
+          $user->name = $data['userName'];
+          $user->typeAuth = '3';
+          //var_dump($user);
+          $entityManager = $this->entityManger;
+          $entityManager->persist($user);
+          $entityManager->flush();
+      }
+        
+        return $user->getArrayCopy();
        
     }
 }
