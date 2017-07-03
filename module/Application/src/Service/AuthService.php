@@ -67,7 +67,7 @@ class AuthService implements AuthServiceInterface
     {
 
       $user = $this->entityManger->getRepository('Application\Entity\UserEntity')
-          ->findOneBy(['email' => $data['userEmail'], 'gmailId' => $data['gmailId']]);
+          ->findOneBy(['email' => $data['userEmail'], 'gmailId' => $data['userId']]);
 
       if (!$user) {
           $user = new UserEntity();
